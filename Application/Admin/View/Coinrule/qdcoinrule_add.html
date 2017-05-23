@@ -1,0 +1,56 @@
+<extend name="Public:base" />
+<block name="main-header">
+	<div class="header">
+        <h1 class="page-title">签到赠送维美币规则</h1>
+        <ul class="breadcrumb">
+            <li>维美币规则</li> 
+            <li class="active">新增签到维美币规则</li>          
+        </ul>
+    </div>
+</block>
+
+<block name="main-content">
+	<div class="main-content" style="height: 1350px;">
+        <form enctype="multipart/form-data" action="{:U('qdcoinrule_add_update')}" method="post" class="demoform" >
+           <div class="form-group clearfix">
+				<label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">签到送币: <span style="color:red">*</span></label>
+				<div class="col-md-6" style="padding:0px 0px 10px 0px;">
+					<input type="text" class="form-control" style="background-color: #eee;" name="txtcoin" id="txtcoin" value="" datatype="n" nullmsg="请填写维美币！" errormsg="请填写维美币！"
+					>
+				</div>
+			</div>
+			 <div class="form-group clearfix">
+				<label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">截止时间: <span style="color:red">*</span></label>
+				<div class="input-group date form_date col-md-6" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" size="16" type="text"  value="" readonly name="txttimeto" id="txttimeto" datatype="*" nullmsg="请选择截止时间！" errormsg="请选择截止时间！" >
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+				
+			</div>
+						
+			<div class="form-group">
+				<div class="btn-toolbar list-toolbar col-md-offset-2 col-md-10" style="margin-top:15px;margin-bottom:40px;">
+				<button type="submit" class="btn btn-primary" ><i class="fa fa-save"></i> 添加</button>
+			<a href="{:U('qdcoinrule_list')}" class="btn btn-danger"><i class="glyphicon glyphicon-list"></i> 返回列表</a>
+				</div>
+			</div>
+
+        </form>
+	</div>
+	<script type="text/javascript">
+		 $(".demoform").Validform();
+		 	$('.form_date').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0,
+		language:'zh-CN',
+    });
+	</script>
+
+	
+</block>

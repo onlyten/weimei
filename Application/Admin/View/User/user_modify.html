@@ -1,0 +1,131 @@
+<extend name="Public:base" />
+
+<block name="main-header">
+	<div class="header">
+        <h1 class="page-title">编辑会员</h1>
+        <ul class="breadcrumb">
+            <li>会员管理</li>
+            <li class="active">编辑会员</li>
+        </ul>
+    </div>
+</block>
+<block name="main-content">
+	<div class="main-content" style="height: 1350px;">
+		<form enctype="multipart/form-data" action="{:U('user_modify_update',array('sid'=>$userinfo[0]['id']))}" method="post" class="demoform" >
+         
+            <script type="text/javascript">
+            function showdiv() {
+            	$id=$("#selmember").val();
+            	if($id==0)
+            	{
+            		$("#carddiv").removeClass("showblock");
+            		$("#carddiv").addClass("hide");
+            	}
+            	else if($id==1){
+                    $("#carddiv").removeClass("hide");
+            		$("#carddiv").addClass("showblock");
+            	}
+            }
+            	
+            </script>
+
+		   <div class="form-group clearfix">
+				<label class="col-md-2 control-label" style="padding:0px 10px 5px 0px; text-align: right;">会员类型</label>
+				<div class="col-md-3" style="padding:0px 0px 10px 0px;">
+				<select name="selmember" id="selmember"  class="form-control" onclick="showdiv();">
+					<option value="0">线上会员</option>
+                    <option value="1">线下会员</option>
+				</select>
+				</div>
+			</div>
+			<if condition="$userinfo[0]['member'] eq 0">
+             <div class="form-group clearfix hide" id="carddiv" name="carddiv" >
+			</if>
+			<if condition="$userinfo[0]['member'] eq 1">
+             <div class="form-group clearfix showblock" id="carddiv" name="carddiv" >
+			</if>
+			
+				<label class="col-md-2 control-label" style="padding:0px 10px 5px 0px; text-align: right;">会员卡号<span style="color:red">*</span></label>
+				<div class="col-md-3" style="padding:0px 0px 10px 0px;">
+				<input type="text" class="form-control" name="card_num" id="card_num" placeholder="线下会员必填"  value="{$userinfo[0]['card_num']}" >
+				</div>
+			</div>
+
+			<div class="form-group clearfix">
+				<label class="col-md-2 control-label" style="padding:0px 10px 5px 0px; text-align: right;">会员余额</label>
+				<div class="col-md-3" style="padding:0px 0px 10px 0px;">
+				<input type="text" class="form-control" name="txtyue" id="txtyue" value="{$userinfo[0]['yue']}" datatype="n" nullmsg="请填写会员余额！" errormsg="请填写会员余额！" ></input>				
+				</div>
+				<div class="col-md-3" style="text-align: left;"><span style="color:#f60; font-size: 15px; font-weight: bold;">元</span></div> 
+			</div>
+			<div class="form-group clearfix">
+				<label class="col-md-2 control-label" style="padding:0px 10px 5px 0px; text-align: right;">总消费</label>
+				<div class="col-md-3" style="padding:0px 0px 10px 0px;">
+                <input type="text" class="form-control" name="txtxiaofei" id="txtxiaofei" value="{$userinfo[0]['xiaofei']}" datatype="n" nullmsg="请填写总消费！" errormsg="请填写总消费！" ></input>				 
+				</div>
+				<div class="col-md-3" style="text-align: left;"><span style="color:#f60; font-size: 15px; font-weight: bold;">元</span></div>
+			</div>
+		
+			<div class="form-group clearfix">
+				<label class="col-md-2 control-label" style="padding:0px 10px 5px 0px; text-align: right;">会员姓名<span style="color:red">*</span></label>
+				<div class="col-md-4" style="padding:0px 0px 10px 0px;">
+				<input type="text" class="form-control" name="txtname" id="txtname" placeholder="必填项" value="{$userinfo[0]['name']}" datatype="*" nullmsg="请填写会员姓名！" errormsg="请填写会员姓名！" >
+				</div>
+			</div>
+			
+			<div class="form-group clearfix">
+				<label class="col-md-2 control-label" style="padding:0px 10px 5px 0px; text-align: right;">会员电话<span style="color:red">*</span></label>
+				<div class="col-md-4" style="padding:0px 0px 10px 0px;">
+				<input type="text" class="form-control" name="txtphone" id="txtphone" placeholder="必填项" value="{$userinfo[0]['mobile']}" datatype="m" nullmsg="请填写会员电话！" errormsg="请填写会员电话！" >
+				</div>
+			</div>
+			<div class="form-group clearfix">
+			<label class="col-md-2 control-label" style="padding:0px 10px 5px 0px; text-align: right;">会员等级<span style="color:red">*</span></label>
+				<div class="col-md-4" style="padding:0px 0px 10px 0px;">
+					<select class="chzn-select form-control" name="sellevel" id="sellevel">
+					    <option value="1">暂无</option>
+						<option value="2">闺蜜卡</option>
+						<option value="3">潜力卡</option>
+						<option value="4">维美女人卡</option>
+						<option value="5">魅力女人卡</option>
+                        <option value="6">精致女人卡</option>
+                        <option value="7">完美女人卡</option>					
+					</select>
+				</div>
+			</div>
+
+			<div class="form-group clearfix">
+				<label class="col-md-2 control-label" style="padding:0px 10px 5px 0px; text-align: right;">会员地址<span style="color:red">*</span></label>
+				<div class="col-md-6" style="padding:0px 0px 10px 0px;">
+				<input type="text" class="form-control" name="txtaddress" id="txtaddress" placeholder="必填项" value="{$userinfo[0]['address']}" datatype="*" nullmsg="请填写会员地址！" errormsg="请填写会员地址！" >
+				</div>
+			</div>
+
+			<div class="form-group clearfix">
+				<label class="col-md-2 control-label" style="padding:0px 10px 5px 0px; text-align: right;">备注：<span style="color:red">*</span></label>
+				<div class="col-md-6" style="padding:0px 0px 10px 0px;">
+				<textarea name="txtnote" id="txtnote" class="form-control" value="">{$userinfo[0]['note']}</textarea>
+				</div>
+			</div>
+
+		
+			<div class="form-group">
+				<div class="btn-toolbar list-toolbar col-md-offset-2 col-md-10" style="margin-top:15px;margin-bottom:40px;">
+				<button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> 保 存 </button>
+				<a href="{:U('user_list')}" class="btn btn-danger" style="margin-left: 60px;"><i class="glyphicon glyphicon-list"></i> 返回列表</a>
+				</div>
+			</div>
+		</form>
+	</div>
+
+<script type="text/javascript">
+	$(".demoform").Validform();
+		$(document).ready(function() {
+				$("select[name='selmember']").val("{$userinfo[0]['member']}");
+                $("select[name='sellevel']").val("{$userinfo[0]['level']}");
+			});
+    
+</script>
+
+
+</block>

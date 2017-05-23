@@ -1,0 +1,178 @@
+<extend name="Public:base" />
+
+<block name="main-header">
+	<div class="header">
+        <h1 class="page-title">维美管家会员管理</h1>
+        <ul class="breadcrumb">
+            <li>维美管家会员管理</li>
+            <li class="active">维美管家会员列表</li>
+        </ul>
+    </div>
+</block>
+
+<block name="main-content">
+	<div class="main-content">
+	<form enctype="multipart/form-data" action="{:U('user_list')}" method="post">
+
+	  <div class="clearfix">
+		<div class="btn-toolbar list-toolbar col-md-6 clearfix" style="height:40px;line-height:40px;">
+			<label class="control-label" style="float:left;width: 20%; text-align: right;">姓名&nbsp;&nbsp;</label>
+		    <input type="text" class="form-control" style="width:50%;float:left;" id="txtname" name="txtname"/>		  
+		</div>
+	  </div>
+	  <div class="clearfix">
+		<div class="btn-toolbar list-toolbar col-md-6 clearfix" style="height:40px;line-height:40px;">
+			<label class="control-label" style="float:left;width: 20%; text-align: right;">电话&nbsp;&nbsp;</label>
+		    <input type="text" class="form-control" style="width:50%;float:left;" id="txtphone" name="txtphone"/>	  
+		</div>
+	  </div>
+
+      <div class="clearfix">
+		<div class="btn-toolbar list-toolbar col-md-6 clearfix" style="height:40px;line-height:40px;">
+			<label class="control-label" style="float:left;width: 20%; text-align: right;">会员等级&nbsp;&nbsp;</label>
+			<select class="chzn-select form-control" name="sellevel" id="sellevel" style="width:50%;float:left;">
+			    <option value="">--请选择--</option>
+                <option value="2">闺蜜卡</option>
+                <option value="3">潜力卡</option>
+                <option value="4">维美女人卡</option>
+                <option value="5">魅力女人卡</option>
+                <option value="6">精致女人卡</option>
+                <option value="7">完美女人卡</option>
+			</select>		  
+		</div>
+		<div class='col-md-4' style="padding: 0px;">
+			<button class="btn btn-primary" id="btn_search" type="submit" style="width:60%;float:left; "><i class="glyphicon glyphicon-search"></i> 搜索</button></div>
+	  </div>
+	</form>
+
+		<form enctype="multipart/form-data" action="{:U('user_delete_update')}" method="post" >
+           <div class="btn-toolbar list-toolbar col-md-12" style="margin-top: -20px;">　　　　　　　　　　　　　　　　　　
+			    <div class='col-md-2'><button type="submit" class="btn btn-danger" name="del" ><i class="glyphicon glyphicon-trash"></i> 删除会员</button></div>
+			    <div class='col-md-2'>
+			       <a href="{:U('user_output')}" role="button" class="btn btn-success" ><i class="glyphicon"></i> 会员导出</a>	
+			    </div> 
+			</div>
+			<!-- <h1 class="page">Premium User List</h1> -->
+			<h3 class="page-tagline"></h3>
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table table-striped">
+						<thead>
+							<tr style="background: #0099FF;color:#FFFFFF">
+								<th>会员id</th>
+								<th>会员姓名</th>								
+								<th>会员电话</th>
+								<th>会员地址</th>
+								<th>会员等级</th>
+								<th>维美币</th>
+								<th>会员类型</th>
+								<th>卡号</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<volist name='userlist' id='vo'>
+							<tr>
+								<td> <input type="checkbox" name="delete_id[]" value="{$vo['id']}">&nbsp;&nbsp;{$vo['id']}</td>
+								<td>{$vo['name']}</td>
+								<td>{$vo['mobile']}</td>
+								<td>{$vo['address']}</td>
+								<td>
+                                <if condition="$vo['level'] eq 1">
+                                   <span style="color:#f60; font-size: 15px;">暂无</span> 
+                                </if>
+                                <if condition="$vo['level'] eq 2">
+                                   <span style="color:#f60; font-size: 15px;">闺蜜卡</span> 
+                                </if>
+                                <if condition="$vo['level'] eq 3">
+                                   <span style="color:#f60; font-size: 15px;">潜力卡</span> 
+                                </if>
+                                <if condition="$vo['level'] eq 4">
+                                   <span style="color:#f60; font-size: 15px;">维美女人卡</span> 
+                                </if>
+                                <if condition="$vo['level'] eq 5">
+                                   <span style="color:#f60; font-size: 15px;">魅力女人卡</span> 
+                                </if>
+                                <if condition="$vo['level'] eq 6">
+                                   <span style="color:#f60; font-size: 15px;">精致女人卡</span> 
+                                </if>
+                                <if condition="$vo['level'] eq 7">
+                                   <span style="color:#f60; font-size: 15px;">完美女人卡</span> 
+                                </if>
+								</td>
+								
+								<td>{$vo['yue']}</td>
+								<td>
+                               <if condition="$vo['member'] eq 0">
+                                   <span style="color:#f60; font-size: 15px;">线上会员</span> 
+                                </if>
+                                <if condition="$vo['member'] eq 1">
+                                   <span style="color:#f60; font-size: 15px;">线下会员</span> 
+                                </if>
+								</td>
+								<td>{$vo['card_num']}</td>															
+								<td>
+									<a href="{:U('user_modify',array('sid'=>$vo['id']))}">编辑</a>
+									<a href="{:U('user_addcoin',array('sid'=>$vo['id']))}">会员充值</a>
+								</td>
+							</tr>
+							</volist>
+						</tbody>
+					</table>
+					
+				</div>
+			</div>
+		</form>
+		<input type="text" value="all" id="page_condition" style="display:none;" />
+		<input type="text" value="" id="order_condition"  style="display:none;" />
+		<div class="result page" id='footer_div' style="text-align:center"><font id='wc'>共 {$server_count} 条记录  {$page_now}/{$server_pagenum} 页 </font>  <a class="pre_page" href="#">上一页</a>  <a class="next_page" href="#">下一页</a>  跳至<input style="width:25px;" class="jump_page" type="text"/> 页 &nbsp; <input type="button" class="btn btn-primary btn-sm jump_button" value="提交">  </div>
+	
+	</div>
+	<!-- 模板继承，js函数写到block里 -->
+	<script type="text/javascript">
+		$('.next_page').on('click', function() {
+			$slevel = $('#sellevel').val();
+			page_condition = $('#page_condition').val();
+			if ({$page_now} == {$server_pagenum}) {
+				alert('当前页为最后一页');
+			}else{
+				location.href = "{:U('user_list',array('page_now'=>$page_now+1,'sellevel'=>$slevel))}";
+			};
+		});
+
+		$('.pre_page').on('click', function() {
+			order_condition = $('#order_condition').val();
+			page_condition = $('#page_condition').val();
+			$slevel = $('#sellevel').val();
+			if ({$page_now} == 1) {
+				alert('当前页为第一页');
+			}else{
+				location.href = "{:U('user_list',array('page_now'=>$page_now-1,'sellevel'=>$slevel))}";
+			};
+		});
+
+		$('.jump_button').on('click', function() {
+			order_condition = $('#order_condition').val();
+			page_condition = $('#page_condition').val();
+			if ( parseInt($('.jump_page').val()) < 1 || parseInt($('.jump_page').val()) > {$server_pagenum} ) {
+				alert('超过页数范围');
+			}else{
+				location.href = "{:U('user_list')}/page_now/"+$('.jump_page').val();
+			};
+		});
+
+		$(document).ready(function() {
+			if ('{$sname}' != '') {
+				$('#txtname').val('{$sname}');
+			};
+			if ('{$sphone}' != '') {
+			$('#txtphone').val('{$sphone}');
+			};
+			if ('{$slevel}' != '') {
+				$('#sellevel').val('{$slevel}');
+			};
+			
+		});
+
+	</script>
+</block>

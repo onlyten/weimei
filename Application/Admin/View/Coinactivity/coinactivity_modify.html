@@ -1,0 +1,115 @@
+<extend name="Public:base" />
+
+<block name="main-header">
+	<div class="header">
+        <h1 class="page-title">编辑维美币活动</h1>
+        <ul class="breadcrumb">
+            <li>维美币活动</li>
+            <li class="active">编辑维美币活动</li>
+        </ul>
+    </div>
+</block>
+<block name="main-content">
+	<div class="main-content" style="height: 1350px;">
+		<form enctype="multipart/form-data" action="{:U('coinactivity_modify_update',array('sid'=>$coinactivity[0]['id']))}" method="post" class="demoform" >
+			<div class="form-group">
+				<label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">标题</label>
+				<div class="col-md-6" style="padding:0px 0px 10px 0px;">
+				<input type="text" class="form-control" name="txttitle" id="txttitle" placeholder="必填项" value="{$coinactivity[0]['title']}" datatype="*" nullmsg="请填写活动标题！" errormsg="请填写活动标题！" >
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">简介 <span style="color:red">*</span></label>
+				<div class="col-md-6" style="padding:0px 0px 10px 0px;">
+					<textarea type="text" class="form-control" name="txtintro" id="txtintro" placeholder="必填项" datatype="*" nullmsg="请填写活动简介！" errormsg="请填写活动简介！">
+					{$coinactivity[0]['introduction']}</textarea>
+				</div>
+			</div>
+          <!--
+			<div class="control-group">
+				<label for="insertimage"class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">标题图片:</label>
+				<div class="col-md-12" style="padding:0px 0px 10px 0px;">
+					<div class="controls">
+						<a id="one">
+						     <img id='imghead1' src="__PICURL__/{$coinactivity[0]['titlepic']}" style="max-width:130px;height:100px;"> 
+						</a>
+						<input id="txttitlepic" name="txttitlepic" class="input-medium" type="file" onChange="a(this)"  style="margin-bottom:10px; width:auto;" >
+					</div>
+				</div>
+			</div>
+           -->
+
+			<div class="form-group ">
+			<label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">维美币数额<span style="color:red">*</span></label>
+				<div class="col-md-6" style="padding:0px 0px 10px 0px;">
+					<input type="text" class="form-control" name="txtcoin" id="txtcoin" placeholder="必填项" value="{$coinactivity[0]['coin']}" datatype="n" nullmsg="请填写维美币数额！" errormsg="维美币数额只能是数字！">
+				</div>
+			</div>
+			<div class="form-group clearfix">
+			<label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">活动路径(url)<span style="color:red">*</span></label>
+				<div class="col-md-8" style="padding:0px 0px 10px 0px;">
+					<input type="text" class="form-control" name="txturl" id="txturl" placeholder="必填项" value="{$coinactivity[0]['acurl']}" readonly="readonly" style="background-color: #ccc;">
+				</div>
+			</div>
+
+			<div class="form-group clearfix">
+				<label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">活动有效期 <span style="color:red">*</span></label>
+				<div class="input-group date form_date col-md-6 " data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" size="16" type="text" style="background-color: #fff;"  value="{$coinactivity[0]['timelong']}" readonly name="txttimein" id="txttimein" datatype="*" nullmsg="请选择截止时间！" errormsg="请选择截止时间！" >
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>
+			</div>
+       <!--<script>
+			KindEditor.ready(function(K) {
+				K.create('textarea[name="content"]', {
+					autoHeightMode : true,
+					afterCreate : function() {
+						this.loadPlugin('autoheight');
+					}
+				});
+			});
+      </script>
+			
+			<div class="form-group">
+				<label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">活动详情 <span style="color:red">*</span></label>
+				<div class="col-md-6" style="padding:0px 0px 10px 0px;">
+					<textarea style="width:600px;height:400px;" name="content" id="content" placeholder="必填项" value="">{$coinactivity[0]['content']}</textarea>
+				</div>
+			</div>
+			-->
+
+			<div class="form-group">
+				<div class="btn-toolbar list-toolbar col-md-offset-2 col-md-10" style="margin-top:15px;margin-bottom:40px;">
+				<button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> 保 存 </button>
+				<a href="{:U('coinactivity_list')}" class="btn btn-danger" style="margin-left: 60px;"><i class="glyphicon glyphicon-list"></i> 返回列表</a>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	
+
+
+<script type="text/javascript">
+		 $(".demoform").Validform();
+		 	$('.form_date').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0,
+		language:'zh-CN',
+    });
+	</script>
+
+<script type="text/javascript">
+	
+	$(".demoform").Validform();
+    
+</script>
+
+
+</block>

@@ -1,0 +1,66 @@
+<extend name="Public:base" />
+
+<block name="main-header">
+	<div class="header">
+        <h1 class="page-title">会员充值</h1>
+        <ul class="breadcrumb">
+            <li>会员管理</li>
+            <li class="active">会员充值</li>
+        </ul>
+    </div>
+</block>
+<block name="main-content">
+	<div class="main-content" style="height: 1350px;">
+		<form enctype="multipart/form-data" action="{:U('user_addcoin_modify')}" method="post" class="demoform" >
+           <div class="form-group clearfix">
+				<label class="col-md-2 control-label" style="padding:0px 10px 5px 0px; text-align: right;">会员姓名：</label>
+				<div class="col-md-4" style="padding:0px 0px 10px 0px;">
+				{$userinfo[0]['name']}
+				</div>
+				<input type="hidden" name="userid" id="userid" value="{$userinfo[0]['id']}" />
+				<input type="hidden" name="cruleid" id="cruleid" value="{$crule[0]['id']}" />
+			</div>
+		   <div class="form-group clearfix">
+				<label class="col-md-2 control-label" style="padding:0px 10px 5px 0px; text-align: right;">充送规则：</label>
+				<div class="col-md-3" style="padding:0px 0px 10px 0px;">
+				每充值100元赠送<span style="color:#f60; font-size: 15px; font-weight: bold;">{$crule[0]['coins']}</span> 个唯美币
+				</div>
+			</div>
+			<div class="form-group clearfix">
+				<label class="col-md-2 control-label" style="padding:0px 10px 5px 0px; text-align: right;">截止时间：</label>
+				<div class="col-md-3" style="padding:0px 0px 10px 0px;">
+				{$crule[0]['timeto']}
+				</div>
+			</div>
+			<div class="form-group clearfix">
+				<label class="col-md-2 control-label" style="padding:0px 10px 5px 0px; text-align: right;">剩余唯美币：</label>
+				<div class="col-md-1" style="padding:0px 0px 10px 0px;">
+					{$userinfo[0]['yue']}			
+				</div>
+				<div class="col-md-1" style="text-align: left;"><span style="color:#f60; font-size: 15px; font-weight: bold;">个</span></div> 
+			</div>
+			<div class="form-group clearfix">
+				<label class="col-md-2 control-label" style="padding:0px 10px 5px 0px; text-align: right;"><span style="color:red">*</span>充值唯美币：</label>
+				<div class="col-md-3" style="padding:0px 0px 10px 0px;">
+                <input type="text" class="form-control" name="txtcoins" id="txtcoins" value="" datatype="n" nullmsg="请填写唯美币！" errormsg="唯美币只能为整数！" ></input>				 
+				</div>
+				<div class="col-md-3" style="text-align: left;"><span style="color:#f60; font-size: 15px; font-weight: bold;">元</span></div>
+			</div>
+		
+				
+			<div class="form-group">
+				<div class="btn-toolbar list-toolbar col-md-offset-2 col-md-10" style="margin-top:15px;margin-bottom:40px;">
+				<button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> 保 存 </button>
+				<a href="{:U('user_list')}" class="btn btn-danger" style="margin-left: 60px;"><i class="glyphicon glyphicon-list"></i> 返回列表</a>
+				</div>
+			</div>
+		</form>
+	</div>
+
+<script type="text/javascript">
+	$(".demoform").Validform();
+    
+</script>
+
+
+</block>

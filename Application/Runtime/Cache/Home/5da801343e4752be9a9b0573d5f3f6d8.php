@@ -1,0 +1,178 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html class="single login">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="MobileOptimized" content="320">
+
+    <title>维美医疗管理员绑定微信ID</title>
+
+    <link rel="stylesheet" type="text/css" href="/weimei/Public/Home/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/weimei/Public/Home/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="/weimei/Public/Home/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/weimei/Public/Home/css/custom.css">
+</head>
+
+<body class="vh-center">
+<section>
+    <div class="logo"><img src="/weimei/Public//images/logo.png" alt=""></div>
+   
+    <form action="<?php echo U('login_check');?>" method="post">
+        <div class="control mobile">
+            <input type="text" name="username" value="" placeholder="用户名">
+            <span class="ico"></span>
+        </div>
+        <div class="control password">
+            <input type="password" name="password" value="" placeholder="密码">
+            <span class="ico"></span>
+            <!--<a id="resetPassword" href="password_pre.html">忘记密码</a>-->
+        </div>
+       <input type="hidden" name="txtwxid" id="txtwxid" value="<?php echo ($openid); ?>"></input>
+        <button class="submit" type="submit">绑定</button>
+    </form>
+</section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!doctype html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>维美管家管理平台</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/weimei/Public/Home/css/bootstrap.css">
+    <link rel="stylesheet" href="/weimei/Public/Home/css/font-awesome.css">
+
+    <script src="/weimei/Public/Home/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="_/weimei/Public/Home/js/jQuery-Knob/js/jquery.knob.js" type="text/javascript"></script>
+
+    
+
+    <link rel="stylesheet" type="text/css" href="/weimei/Public/Home/css/theme.css">
+    <link rel="stylesheet" type="text/css" href="/weimei/Public/Home/css/premium.css">
+
+</head>
+<body class=" theme-blue">
+
+
+
+    <script type="text/javascript">
+        $(function() {
+            var match = document.cookie.match(new RegExp('color=([^;]+)'));
+            if(match) var color = match[1];
+            if(color) {
+                $('body').removeClass(function (index, css) {
+                    return (css.match (/\btheme-\S+/g) || []).join(' ')
+                })
+                $('body').addClass('theme-' + color);
+            }
+
+            $('[data-popover="true"]').popover({html: true});
+            
+        });
+    </script>
+    <style type="text/css">
+        #line-chart {
+            height:300px;
+            width:800px;
+            margin: 0px auto;
+            margin-top: 1em;
+        }
+        .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover { 
+            color: #fff;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function() {
+            var uls = $('.sidebar-nav > ul > *').clone();
+            uls.addClass('visible-xs');
+            $('#main-menu').append(uls.clone());
+        });
+    </script>
+
+
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+  
+
+ 
+   
+ 
+
+    <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <img src="/weimei/Public/images/carcar.png" width="280px" height="36px" style="margin-top:10px">
+		 <div style="margin-top:12px"><font color="white" size="5px">维美管家管理平台</font></div>
+		 </div>
+
+        <div class="navbar-collapse collapse" style="height: 1px;">
+
+        </div>
+      </div>
+    </div>
+    
+
+
+        <div class="dialog">
+    <div class="panel panel-default">
+        <p class="panel-heading no-collapse">管理员登录</p>
+        <div class="panel-body">
+            <form action="<?php echo U('login_check');?>" method="post">
+                <div class="form-group">
+                    <label>用户名</label>
+                    <input type="text" name="username" class="form-control span12">
+                </div>
+                <div class="form-group">
+                <label>密码</label>
+                    <input type="password" name="password" class="form-controlspan12 form-control">
+                </div>
+                <input type="hidden" name="txtwxid" id="txtwxid" value="<?php echo ($openid); ?>"></input>
+                <button type="submit" class="btn btn-primary pull-right">登 录</button>
+                 <label class="remember-me"><input type="checkbox"> Remember me</label> 
+                <div class="clearfix"></div>
+            </form>
+        </div>
+    </div>
+     <p class="pull-right" style=""><a href="http://www.portnine.com" target="blank" style="font-size: .75em; margin-top: .25em;">Design by Portnine</a></p>
+   <p><a href="reset-password.html">Forgot your password?</a></p> 
+</div>
+
+
+
+    <script src="/weimei/Public/Home/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $("[rel=tooltip]").tooltip();
+        $(function() {
+            $('.demo-cancel-click').click(function(){return false;});
+        });
+    </script>
+    
+  
+</body></html>-->

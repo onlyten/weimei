@@ -1,0 +1,52 @@
+<extend name="Public:base" />
+
+<block name="main-header">
+	<div class="header">
+        <h1 class="page-title">管家提醒</h1>
+        <ul class="breadcrumb">
+            <li>管家提醒</li> 
+            <li class="active">添加管家提醒</li>          
+        </ul>
+    </div>
+</block>
+
+<block name="main-content">
+  <div class="main-content" style="height: 1350px;">
+        <form enctype="multipart/form-data" action="{:U('order_warn_modify_update')}" method="post" class="demoform" >
+        <div class="form-group clearfix">
+        <label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">订单号:</label>
+        <div class="col-md-6" style="padding:0px 0px 10px 0px;">
+          <input type="text" class="form-control" style="background-color: #eee;" name="txtcoin" id="txtcoin" readonly="readonly" value="{$order1[0]['order_id']}">
+        </div>
+        <input type="hidden" name="txtorderid" id="txtorderid" value="{$order1[0]['id']}"></input>
+      </div>
+       <div class="form-group clearfix">
+        <label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">会员姓名:</label>
+          <div class="col-md-6" style="padding:0px 0px 10px 0px;">
+          <input type="text" class="form-control" style="background-color: #eee;" readonly="readonly" name="txtcoin" id="txtcoin" value="{$order1[0]['name']}">
+        </div>       
+      </div>
+      <div class="form-group clearfix">
+        <label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">美容项目:</label>
+        <div class="col-md-6" style="padding:0px 0px 10px 0px;">
+          <input type="text" class="form-control" style="background-color: #eee;" name="txtcoin" id="txtcoin" readonly="readonly" value="{$order1[0]['mei_name']}">
+        </div>
+      </div>
+      <div class="form-group clearfix">
+        <label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;"><span style="color:red">*</span>管家提醒: </label>
+        <div class="col-md-6" style="padding:0px 0px 10px 0px;">
+          <textarea type="text" class="form-control" name="txtwarn" id="txtwarn" placeholder="必填项" >{$order1[0]['warn']}</textarea>
+        </div>
+      </div>
+            
+      <div class="form-group">
+        <div class="btn-toolbar list-toolbar col-md-offset-2 col-md-10" style="margin-top:15px;margin-bottom:40px;">
+        <button type="submit" class="btn btn-primary" style="width: 20%;"><i class="fa fa-save"></i> 保 存</button>
+       <a href="{:U('order_list')}" class="btn btn-danger" style="margin-left: 2%;width: 20%;"><i class="glyphicon glyphicon-list"></i> 返回列表</a>
+        </div>
+      </div>
+
+        </form>
+  </div>
+ 
+</block>

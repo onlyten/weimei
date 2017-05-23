@@ -1,0 +1,195 @@
+<extend name="Public:base" />
+<block name="main-header">
+	<div class="header">
+        <h1 class="page-title">订单管理</h1>
+        <ul class="breadcrumb">
+            <li>订单管理</li> 
+            <li class="active">订单管理</li>          
+        </ul>
+    </div>
+</block>
+
+<block name="main-content">
+	<div class="main-content"> 
+	<form enctype="multipart/form-data" action="" method="post"  name="form1" role="form" >
+      <div class="clearfix">
+	    <div class="btn-toolbar list-toolbar col-md-6" style="height:40px;line-height:40px;">
+			<label class="control-label" style="float:left; width: 20%; text-align: right;">订单号&nbsp;&nbsp;</label>
+		    <input type="text" class="form-control" style="width:50%;float:left;" id="orderid1" name="orderid1"/>		   
+	    </div>
+	  </div>
+	  <div class="clearfix">
+		<div class="btn-toolbar list-toolbar col-md-6 clearfix" style="height:40px;line-height:40px;">
+			<label class="control-label" style="float:left;width: 20%; text-align: right;">姓名&nbsp;&nbsp;</label>
+		    <input type="text" class="form-control" style="width:50%;float:left;" id="uname" name="uname" />		  
+		</div>
+	  </div>
+	  <div class="clearfix">
+		<div class="btn-toolbar list-toolbar col-md-6 clearfix" style="height:40px;line-height:40px;">
+			<label class="control-label" style="float:left;width: 20%; text-align: right;">电话&nbsp;&nbsp;</label>
+		    <input type="text" class="form-control" style="width:50%;float:left;" id="uphone" name="uphone" value="{$search_uphone}" />	  
+		</div>
+	  </div>
+
+ <script type="text/javascript">
+        function output() {
+            document.form1.action = "http://serv2.matesofts.com/weimei/index.php/Admin/Order/dingdan_output";
+            document.form1.submit();
+        }
+        function showlist() {
+            document.form1.action="http://serv2.matesofts.com/weimei/index.php/Admin/Order/order_list";
+            document.form1.submit();
+        }
+    </script>
+
+	  <div class="clearfix">
+		<div class="btn-toolbar list-toolbar col-md-6 clearfix" style="height:40px;line-height:40px;">
+			<label class="control-label" style="float:left;width: 20%; text-align: right;">订单状态&nbsp;&nbsp;</label>
+			<select class="chzn-select form-control" name="selstate" id="selstate" style="width:50%;float:left;"  value="{$search_state}">
+			    <option value="">请选择</option>
+                <option value="0">进行中</option>
+                <option value="1">取消</option>
+                <option value="2">未服务</option>
+                <option value="3">完成</option>
+			</select></div>
+		     <div class='col-md-2' style="padding: 0px;">
+			     <button class="btn btn-primary" id="btn_search" type="submit" style="width:80%;float:left; " onclick="showlist()"><i class="glyphicon glyphicon-search"></i> 搜索</button></div>	
+			 <div class='col-md-2' style="padding: 0px;">   
+			  <button class="btn btn-danger" id="btn_search1" type="submit" style="width:80%;float:left; " onclick="output()"><i class="glyphicon icon-circle-arrow-down"></i> 导出</button></div>  
+	  </div>
+
+	  <div class="btn-toolbar list-toolbar col-md-12">
+		    <button class="btn btn-primary" id="btn_search" type="submit" style="width:15%;float:left;"><i class="glyphicon glyphicon-trash"></i> 删除</button>
+		 </div>
+        <h3 class="page-tagline"></h3>
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table table-striped">
+						<thead>
+							<tr style="background: #0099FF;color:#FFFFFF">
+								<th>序号</th>
+								<th>订单号</th>
+								<th>姓名</th>
+								<th>电话</th>
+								<th>美容项目</th>
+								<th>预约状态</th>
+								<th>预约类型</th>
+								<th>支付金额</th>
+								<th>预约时间</th>							
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<volist name='orderlist' id='vo'>
+							<tr>
+								<td> <input type="checkbox" name="delete_id[]" value="{$vo['id']}">&nbsp;&nbsp;{$vo['id']}</td>
+								<td>{$vo['order_id']}</td>
+								<td>{$vo['name']}</td>
+								<td>{$vo['mobile']}</td>
+								<td>{$vo['mei_name']}</td>
+								<td>
+                                <if condition="$vo['state'] eq 0">
+                                   <span style="color:#f60; font-size: 15px; font-weight: bold;">进行中</span> 
+                                </if>
+                                <if condition="$vo['state'] eq 1">
+                                   <span style="color:#f60; font-size: 15px; font-weight: bold;"> 取消</span> 
+                                </if>
+                                <if condition="$vo['state'] eq 2">
+                                    <span style="color:#f60; font-size: 15px; font-weight: bold;">未服务 </span>
+                                </if>
+                                 <if condition="$vo['state'] eq 3">
+                                    <span style="color:#f60; font-size: 15px; font-weight: bold;">完成 </span>
+                                </if>
+								</td>
+								<td>
+								
+                                <if condition="$vo['type'] eq 0">
+                                预约上门
+                                </if>
+                                <if condition="$vo['type'] eq 1">
+                               预约到院
+                                </if>
+
+								</td>
+								<td>{$vo['xiaofei']}</td>
+								<td>{$vo['time']}</td>
+															
+								<td>
+									<!--<a href="{:U('server_detail_modify',array('mei_id'=>$vo['id']))}">编辑</a>-->
+                                    <a href="{:U('order_update',array('order_id'=>$vo['id']))}">修改</a>
+                                    <a href="{:U('order_pd',array('sid'=>$vo['id']))}">派单</a>
+                                    <a href="{:U('order_pj',array('sid'=>$vo['order_id']))}">查看评价</a>
+                                    <a href="{:U('order_warn',array('sid'=>$vo['id']))}">录入提醒</a>
+								</td>
+							</tr>
+							</volist>
+						</tbody>
+					</table>
+					
+				</div>
+			</div>
+        </form>
+		<input type="text" value="all" id="page_condition" style="display:none;" />
+		<input type="text" value="" id="order_condition"  style="display:none;" />
+		<div class="result page" id='footer_div' style="text-align:center"><font id='wc'>共 {$order_count} 条记录  {$page_now}/{$server_pagenum} 页 </font>  <a class="pre_page" href="#">上一页</a>  <a class="next_page" href="#">下一页</a>  跳至<input style="width:25px;" class="jump_page" id="jump_page" name="jump_page" type="text"/> 页 &nbsp; 
+		<input type="button" class="btn btn-primary btn-sm jump_button" value="提交">
+		</div>
+	
+	
+	</div>
+	<!-- 模板继承，js函数写到block里 -->
+	<script type="text/javascript">
+		$('.next_page').on('click', function() {
+			order_condition = $('#order_condition').val();
+			page_condition = $('#page_condition').val();
+			if ({$page_now} == {$server_pagenum}) {
+				alert('当前页为最后一页');
+			}else{
+				location.href = "{:U('order_list',array('page_now'=>$page_now+1,'orderid1'=>$search_orderid,'uname'=>$search_uname,'uphone'=>$search_uphone,'selstate'=>$search_state))}";
+			};
+		});
+
+		$('.pre_page').on('click', function() {
+			order_condition = $('#order_condition').val();
+			page_condition = $('#page_condition').val();
+			if ({$page_now} == 1) {
+				alert('当前页为第一页');
+			}else{
+				location.href = "{:U('order_list',array('page_now'=>$page_now-1,'orderid1'=>$search_orderid,'uname'=>$search_uname,'uphone'=>$search_uphone,'selstate'=>$search_state))}";
+			};
+		});
+
+		$('.jump_button').on('click', function() {
+			order_condition = $('#order_condition').val();
+			page_condition = $('#page_condition').val();
+			$jumppage=$('#jump_page').val()
+
+			/*$search_state=$('#selstate').val();
+			$search_orderid=$('#orderid1').val();
+			$search_uname=$('#uname').val();
+			$search_uphone=$('#uphone').val();*/
+			if ( parseInt($jumppage) < 1 || parseInt($jumppage) > {$server_pagenum} ) {
+				alert('超过页数范围');
+			}else{
+				//location.href = "{:U('order_list')}/page_now/"+$page_now+"/orderid1/"+$search_orderid+"/uname/"+$search_uname+"/uphone/"+$search_uphone+"/selstate/"+$search_state;
+                location.href = "{:U('order_list')}/page_now/"+$jumppage;
+			};
+		});
+
+		$(document).ready(function() {
+			if ('{$search_orderid}' != '') {
+				$('#orderid1').val('{$search_orderid}');
+			};
+			if ('{$search_uname}' != '') {
+			$('#uname').val('{$search_uname}');
+			};
+			if ('{$search_uphone}' != '') {
+				$('#uphone').val('{$search_uphone}');
+			};
+			if ('{$search_state}' != '') {
+				$('#selstate').val('{$search_state}');
+			};
+		});
+	</script>
+	</div>
+</block>

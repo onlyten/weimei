@@ -1,0 +1,165 @@
+<extend name="Public:base" />
+<!-- 需要继承的不用写，不需要继承（去掉的）要写，并且里面为空 -->
+<block name="main-header">
+	<div class="header">
+        <h1 class="page-title">修改类型</h1>
+        <ul class="breadcrumb">
+            <li>服务类型管理</li>
+            <li class="active">修改类型</li>
+        </ul>
+    </div>
+</block>
+<block name="main-content">
+	<div class="main-content">
+		<form enctype="multipart/form-data"  action="{:U('server_modify_update',array('server_id'=>$server[0]['id']))}" method="post" class="demoform" >
+			<div class="form-group">
+				<label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">类型名</label>
+				<div class="col-md-6" style="padding:0px 0px 10px 0px;">
+					<input type="text" class="form-control" name="server_name" id="server_name" placeholder="" value="{$server[0]['server_name']}" datatype="*" nullmsg="请填写类型名称！" errormsg="请填写类型名称！">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">服务类型</label>
+				<div class="col-md-6" style="padding:0px 0px 10px 0px;">
+					<label class="radio-inline">
+					  <input type="radio" name="server_type" id="server_type" value="1"> 美容项目
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="server_type" id="server_type" value="0"> 美丽管家
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">排序</label>
+				<div class="col-md-6" style="padding:0px 0px 10px 0px;">
+					<input type="text" class="form-control" name="server_weight" id="server_weight" placeholder="" value="{$server[0]['server_weight']}" datatype="n" nullmsg="请填写排序！" errormsg="排序必须为数字！" >
+				</div>
+			</div>
+			<div class="control-group">
+				<label for="insertimage"class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">服务类型图标:</label>
+				<div class="col-md-6" style="padding:0px 0px 10px 0px;">
+					<div class="controls">
+						<a id="preview">
+						    <img id='imghead1' src="__PICURL__/{$server[0]['server_img']}" style="max-width:200px;height:auto;">
+						</a>
+						<input id="picurl" name="picurl" class="input-medium" type="file" onChange="previewImage(this)"  style="margin-bottom:10px;">
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="form-group">
+					<div class="btn-toolbar list-toolbar col-md-offset-2 col-md-10" style="margin-top:20px;margin-bottom:20px;">
+				    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> 保 存</button>
+					<a href="{:U('server_list')}" class="btn btn-danger"><i class="glyphicon glyphicon-list"></i> 返回列表</a>
+			</div>
+		</form>
+		<script>
+		//图片上传
+		function previewImage(file)
+		{
+		var MAXWIDTH  = 260;
+		var MAXHEIGHT = 100;
+		var div = document.getElementById('preview');
+		if (file.files && file.files[0])
+		{
+		div.innerHTML ='<img id=imghead1>';
+		var img = document.getElementById('imghead1');
+		img.onload = function(){
+		var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+		img.width  =  rect.width;
+		img.height =  rect.height;
+		//                 img.style.marginLeft = rect.left+'px';
+		img.style.marginTop = rect.top+'px';
+		}
+		var reader = new FileReader();
+		reader.onload = function(evt){img.src = evt.target.result;}
+		reader.readAsDataURL(file.files[0]);
+		}
+		else //兼容IE
+		{
+		var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+		file.select();
+		var src = document.selection.createRange().text;
+		div.innerHTML = '<img id=imghead1>';
+		var img = document.getElementById('imghead1');
+		img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+		var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+		status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+		div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+		}
+		}
+		function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+		var param = {top:0, left:0, width:width, height:height};
+		if( width>maxWidth || height>maxHeight )
+		{
+		rateWidth = width / maxWidth;
+		rateHeight = height / maxHeight;
+		
+		if( rateWidth > rateHeight )
+		{
+		param.width =  maxWidth;
+		param.height = Math.round(height / rateWidth);
+		}else
+		{
+		param.width = Math.round(width / rateHeight);
+		param.height = maxHeight;
+		}
+		}
+		
+		param.left = Math.round((maxWidth - param.width) / 2);
+		param.top = Math.round((maxHeight - param.height) / 2);
+		return param;
+		}
+				window.document.onkeydown = function(e) {
+					if ('' == document.activeElement.id) {
+						var e=e || event;
+						var currKey=e.keyCode || e.which || e.charCode;
+						if (8 == currKey) {
+							return false;
+						}
+					}
+				};
+
+			$(document).ready(function() {
+				$("input[name='server_type'][value='{$server[0]['server_type']}']").attr("checked",true);
+			});
+		</script>
+		<!-- 表单验证 -->
+		<script type="text/javascript">
+
+			$('#server_name').on('blur', function() {
+				$.ajax({
+					type: "POST",
+			        url: "{:U('server_check')}",
+			        contentType:"application/x-www-form-urlencoded;charset=utf-8", 
+			        dataType: "json",
+			        data: {server_name:$('#server_name').val()},
+			        success: function(msg){
+        			alert(msg.info);        	  
+			        }
+			    });
+			});
+			$('#server_weight').on('blur', function() {
+				$.ajax({
+					type: "POST",
+			        url: "{:U('server_check')}",
+			        contentType:"application/x-www-form-urlencoded;charset=utf-8", 
+			        dataType: "json",
+			        data: {server_weight:$('#server_weight').val()},
+			        success: function(msg){
+        			alert(msg.info);        	  
+			        }
+			    });
+			});
+			function check() {
+            document.getElementById('ok').disabled = 'disabled';
+        }
+		</script>
+		<script type="text/javascript">
+	
+	     $(".demoform").Validform();
+    
+        </script>
+	</div>
+</block>

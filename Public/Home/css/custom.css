@@ -1,0 +1,5145 @@
+/*************************************************
+
+********************** 首页 **********************
+
+*************************************************/
+
+.index-con {
+
+    width: 100%;
+
+}
+
+.index-banner {
+
+    margin-bottom: 10px;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+.index-banner .swiper-slide {
+
+    position: relative;
+
+    padding-top: 66.5%;
+
+    height: 0;
+
+    width: 100%;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+.index-banner .swiper-slide img {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.index-banner .swiper-pagination-bullet {
+
+    background: #fff;
+
+    opacity: 1;
+
+}
+
+.index-banner .swiper-pagination-bullet-active {
+
+    background: #cf69e2;
+
+}
+
+.menu-con {
+
+    width: 100%;
+
+}
+
+.menu-con ul {
+
+    width: 100%;
+
+}
+
+.menu-con ul li {
+
+    float: left;
+
+    margin-top: 10px;
+
+    width: 49%;
+
+    position: relative;
+
+}
+
+.menu-con ul li:nth-child(1),
+
+.menu-con ul li:nth-child(2) {
+
+    margin-top: 0;
+
+}
+
+.menu-con ul li:nth-child(2n) {
+
+    float: right;
+
+}
+
+.menu-con ul li:nth-child(2n) a > img {
+
+    -webkit-transform: rotate(180deg);
+
+    -moz-transform: rotate(180deg);
+
+    -ms-transform: rotate(180deg);
+
+    transform: rotate(180deg);
+
+}
+
+.menu-con ul li a .case {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    padding: 13% 13% 5% 14%;
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+.menu-con ul li a.pic-bg {
+
+    position: relative;
+
+    display: block;
+
+    padding-top: 73.8%;
+
+    width: 100%;
+
+    height: 0;
+
+}
+
+.menu-con ul li a.pic-bg img.borbg {
+
+    position: absolute;
+
+    top: 0;
+
+}
+
+.menu-con ul li img {
+
+    width: 100%;
+
+}
+
+.menu-con ul li a .case img {
+
+}
+
+
+
+
+
+/*************************************************
+
+**************************************************
+
+********************** 美容 **********************
+
+**************************************************
+
+*************************************************/
+
+.facecare-content {
+
+    width: 100%;
+
+    padding: 5px;
+
+}
+
+.facecare-con {
+
+    width: 100%;
+
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+
+    padding: 5px;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+
+}
+
+.facecare-con .top-img {
+
+    position: relative;
+
+    padding-top: 58%;
+
+    height: 0;
+
+}
+
+.facecare-con .top-img img {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 10px;
+
+}
+
+.facecare-con .intro {
+
+    margin: 5px;
+
+}
+
+.facecare-con .intro .tit {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.facecare-con .intro .tit .left {
+
+    float: left;
+
+}
+
+.facecare-con .intro .tit .left a {
+
+    font-size: 1.4rem;
+
+    color: #7e2e8d;
+
+    font-weight: bold;
+
+}
+
+.facecare-con .intro .tit .left a span {
+
+    font-size: 1.2rem;
+
+    color: #666;
+
+    font-weight: normal;
+
+}
+
+.facecare-con .intro .tit .right a {
+
+    font-size: 1.1rem;
+
+    color: #333;
+
+    font-weight: bold;
+
+}
+
+.facecare-con .intro .tit .right a span {
+
+    font-size: 1.4rem;
+
+    color: #ff7a78;
+
+    font-weight: normal;
+
+}
+
+.facecare-con .intro .tit .right {
+
+    float: right;
+
+    padding-top: 3px;
+
+}
+
+.facecare-con .intro .intro-con {
+
+    font-size: 1rem;
+
+    padding: 2.7% 0 0 0;
+
+}
+
+.facecare-con .intro .intro-con p {
+
+    color: #666;
+
+    margin-bottom: 2%;
+
+    line-height: 1.5em;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 3;
+
+    -webkit-box-orient: vertical;
+
+}
+
+.facecare-con .intro .intro-con p span {
+
+    font-size: 1.2rem;
+
+    color: #333;
+
+    font-weight: bold;
+
+}
+
+.facecare-con .intro .intro-con a {
+
+    background: #d76aeb;
+
+    color: #fff;
+
+    font-size: 1.1rem;
+
+    padding: 3px 6px;
+
+    display: inline-block;
+
+    box-sizing: content-box;
+
+    letter-spacing: 1px;
+
+    font-weight: normal;
+
+    margin-top: 2.7%;
+
+}
+
+.face-detail-con, .keeper_detail, .addresslist-con {
+
+    background: #eee;
+
+    width: 100%;
+
+    padding: 10px;
+
+}
+
+.detail-top {
+
+    width: 100%;
+
+}
+
+.detail-top .swiper-slide {
+
+    position: relative;
+
+    padding-top: 56.4%;
+
+    width: 100%;
+
+    height: 0;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+.detail-top .swiper-slide img {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.detail-top .swiper-pagination-bullet {
+
+    background: #fff;
+
+    opacity: 1;
+
+}
+
+.detail-top .swiper-pagination-bullet-active {
+
+    background: #7e2e8d;
+
+}
+
+.intro, .face-detail-con .operate, .face-detail-con .service {
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    margin-top: 10px;
+
+    padding: 10px 0;
+
+}
+
+.face-detail-con .swiper, .qualification .swiper {
+
+    position: relative;
+
+    padding: 0 18px;
+
+}
+
+.intro .tit h3 {
+
+    color: #7e2e8d;
+
+    font-size: 1.4rem;
+
+    font-weight: bold;
+
+    border-bottom: 1px solid #eee;
+
+    padding: 2% 10px;
+
+}
+
+.intro.group .tit h3 {
+
+    border: none;
+
+    border-top: 1px solid #eee;
+
+}
+
+.intro.group .tit h3:first-child {
+
+    border: none;
+
+}
+
+.intro .tit h3 span {
+
+    color: #999;
+
+    font-size: 1rem;
+
+    font-weight: normal;
+
+}
+
+.intro .tit h3 span.s1 {
+
+    color: #64b5c0;
+
+    font-size: 1.1rem;
+
+    font-weight: normal;
+
+}
+
+.intro .intro-con {
+
+    width: 100%;
+
+    font-size: 1rem;
+
+    padding: 0 10px;
+
+}
+
+.swiper-con1, .swiper-con2 {
+
+    width: 100%;
+
+}
+
+.intro .intro-con .swiper-con2 {
+
+    width: 90%;
+
+    margin: 5%;
+
+}
+
+.swiper-button-prev1, .swiper-button-prev2 {
+
+    background-image: url('http://wxsc.wei-mei.com/weimei/Public/images/pre.png');
+
+    left: 0;
+
+}
+
+.swiper-button-next1, .swiper-button-next2 {
+
+    background-image: url('http://wxsc.wei-mei.com/weimei/Public/images/next.png');
+
+    right: 0;
+
+}
+
+.intro .intro-con .value {
+
+    padding: 10px 0 0px 0;
+
+}
+
+.intro .intro-con .value p {
+
+    font-size: 1rem;
+
+    color: #666;
+
+    float: left;
+
+    margin: 0;
+
+}
+
+.intro .intro-con a {
+
+    font-size: 1.2rem;
+
+    color: #333;
+
+    font-weight: bold;
+
+}
+
+.intro .intro-con a span {
+
+    font-size: 1.5rem;
+
+    color: #ff6868;
+
+    font-weight: normal;
+
+}
+
+.intro .intro-con a span.spe {
+
+    text-decoration: line-through;
+
+}
+
+.intro .intro-con p, .keeper_detail .intro .per-data-con p {
+
+    font-size: 1.2rem;
+
+    color: #666;
+
+    line-height: 1.5em;
+
+    letter-spacing: 1px;
+
+    margin-top: 5px;
+
+}
+
+.intro .intro-con p span, .keeper_detail .intro .per-data-con p span {
+
+    font-size: 1.2rem;
+
+    color: #333;
+
+    font-weight: bold;
+
+}
+
+.swiper-con1 .swiper-slide, .swiper-con2 .swiper-slide {
+
+    position: relative;
+
+    padding-top: 40%;
+
+    height: 0;
+
+}
+
+.swiper-con1 .swiper-wrapper, .swiper-con2 .swiper-wrapper {
+
+}
+
+.swiper-con1 .swiper-slide img, .swiper-con2 .swiper-slide img {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.swiper-con1 .op-info, .swiper-con2 .ser-info, .swiper-con3 .qua-info {
+
+    opacity: .7;
+
+    background: black;
+
+    width: 100%;
+
+    position: absolute;
+
+    bottom: 0;
+
+    padding: 2px;
+
+}
+
+.swiper-con1 .op-info p, .swiper-con2 .ser-info p, .swiper-con3 .qua-info p {
+
+    color: #fff;
+
+    font-size: 1.1rem;
+
+    text-align: center;
+
+    padding: 3px;
+
+    letter-spacing: 1px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+
+    -webkit-box-orient: vertical;
+
+}
+
+.face-detail-con .operate, .face-detail-con .service {
+
+    padding: 0px;
+
+    padding-bottom: 10px;
+
+}
+
+.face-detail-con .appoint {
+
+    width: 81%;
+
+    margin: auto;
+
+    margin-top: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+.face-detail-con .appoint a {
+
+    display: inline-block;
+
+    border-radius: 20px;
+
+    color: #fff;
+
+    font-size: 1.2rem;
+
+    padding: 8px;
+
+    text-align: center;
+
+    box-shadow: 0 2px 0 0 #828282;
+
+}
+
+.face-detail-con .appoint a span {
+
+    display: inline-block;
+
+    line-height: 1em;
+
+    vertical-align: middle;
+
+}
+
+.face-detail-con .appoint a img {
+
+    position: relative;
+
+    top: -1px;
+
+    display: inline-block;
+
+    width: 14%;
+
+    margin-left: 10px;
+
+    vertical-align: middle;
+
+}
+
+.face-detail-con .appoint .hospital {
+
+    width: 46%;
+
+    background: #6bbcc6;
+
+}
+
+.face-detail-con .appoint .home {
+
+    width: 46%;
+
+    background: #dc7def;
+
+}
+
+
+
+
+
+/*************************************************
+
+**************************************************
+
+******************** 美丽管家 ********************
+
+**************************************************
+
+*************************************************/
+
+.doctor_intro {
+
+    width: 100%;
+
+}
+
+.doctor_intro .content {
+
+    padding-left: 0 !important;
+
+    padding-right: 0 !important;
+
+}
+
+.doctor_intro .doctor_per {
+
+    padding: 16px 10px;
+
+    border-bottom: 1px solid  #e5e5e5;
+
+}
+
+.doctor_intro .doctor_per:first-child {
+
+    padding-top: 6px;
+
+}
+
+.doctor_intro .doctor_per:last-child {
+
+    border: none;
+
+}
+
+.doctor_intro .doctor_per .per_img {
+
+    width: 50%;
+
+    position: relative;
+
+}
+
+.doctor_intro .doctor_per .per_img .bg {
+
+    padding-top: 78.5%;
+
+    position: relative;
+
+    height: 0;
+
+}
+
+.doctor_intro .doctor_per .per_img .bg img {
+
+    position: absolute;
+
+    top: 0;
+
+}
+
+.doctor_intro .doctor_per .per_img .picture {
+
+    position: absolute;
+
+    top: 0px;
+
+    width: 90%;
+
+    padding: 2%;
+
+    border-radius: 8px;
+
+    box-sizing: content-box;
+
+}
+
+.doctor_intro .doctor_per .per_img img {
+
+    width: 100%;
+
+    border-radius: 8px;
+
+}
+
+.doctor_intro .doctor_per .per_intro {
+
+    width: 50%;
+
+    padding-top: 10px;
+
+    padding-left: 5.5%;
+
+    font-size: 1rem;
+
+}
+
+.doctor_intro .doctor_per .per_intro h3 {
+
+    font-size: 1.4rem;
+
+    color: #7e2e8d;
+
+    font-weight: bold;
+
+}
+
+.doctor_intro .doctor_per .per_intro .attrs {
+
+    margin-top: 6px;
+
+    font-size: 1.2rem;
+
+    color: #666;
+
+    line-height: 1em;
+
+    overflow: hidden;
+
+}
+
+.doctor_intro .doctor_per .per_intro .attrs > span {
+
+    display: block;
+
+    margin-top: 4px;
+
+}
+
+.doctor_intro .doctor_per .per_intro .attrs > span:first-child {
+
+    margin-top: 0;
+
+}
+
+.doctor_intro .doctor_per .per_intro .attrs > .star {
+
+    white-space: nowrap;
+
+}
+
+.doctor_intro .doctor_per .per_intro .attrs > .star em {
+
+    white-space: nowrap;
+
+    font-size: 0;
+
+}
+
+.doctor_intro .doctor_per .per_intro .attrs > .star i {
+
+    color: #7e2e8d;
+
+    font-size: 1.2rem;
+
+    letter-spacing: .2rem;
+
+}
+
+.doctor_intro .doctor_per .per_intro a {
+
+    display: inline-block;
+
+    margin-top: 6px;
+
+    font-size: 1.1rem;
+
+    color: #666;
+
+    padding: 2px 7px;
+
+    color: #6fbec9;
+
+    border: 1px solid #6fbec9;
+
+}
+
+@media screen and (min-width:400px) {
+
+    .doctor_intro .doctor_per .per_intro {
+
+        padding-top: 14px;
+
+    }
+
+}
+
+.keeper_detail .intro .per-data-con ul.per-data {
+
+    border-bottom: 1px solid #eee;
+
+    padding: 10px;
+
+    width: 100%;
+
+}
+
+.keeper_detail .intro .per-data-con ul.per-data li {
+
+    float: left;
+
+    margin-right: 4px;
+
+    padding: 2px 0;
+
+    font-size: 0;
+
+}
+
+.keeper_detail .intro .per-data-con ul.per-data li a {
+
+    line-height: 1em;
+
+    font-size: 1.2rem;
+
+    color: #333;
+
+    font-weight: bold;
+
+}
+
+.keeper_detail .intro .per-data-con ul.per-data li a img {
+
+    position: relative;
+
+    top: -1px;
+
+    display: inline-block;
+
+    margin-right: 4px;
+
+    height: 1.2rem;
+
+    vertical-align: middle;
+
+}
+
+.keeper_detail .intro .per-data-con ul.per-data li a span {
+
+    font-size: 1.2rem;
+
+    color: #666;
+
+    font-weight: normal;
+
+}
+
+.keeper_detail .intro .per-data-con p {
+
+    border-bottom: 1px solid #eee;
+
+    padding: 5px 5px 10px 10px;
+
+}
+
+.keeper_detail .intro .per-data-con p:last-child {
+
+    border: none;
+
+}
+
+.keeper_detail .swiper-con3 .swiper-slide {
+
+    position: relative;
+
+    padding-top: 68.7%;
+
+    height: 0;
+
+    overflow: hidden;
+
+}
+
+.keeper_detail .swiper-con3 .swiper-slide img {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+}
+
+.keeper_detail  .qualification {
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    margin-top: 10px;
+
+    padding: 0px;
+
+    padding-bottom: 10px;
+
+}
+
+.keeper_detail .intro .intro-con .evaluat {
+
+    padding-top: 10px;
+
+}
+
+.keeper_detail .intro .intro-con .evaluat li {
+
+    width: 100%;
+
+    margin-bottom: 10px;
+
+}
+
+.keeper_detail .intro .intro-con .evaluat li a.left {
+
+    width: 30%;
+
+    font-size: 1.2rem;
+
+    color: #333;
+
+}
+
+.keeper_detail .intro .intro-con .evaluat li a.right {
+
+    width: 70%;
+
+    color: #7e2e8d;
+
+    font-size: 1.2rem;
+
+}
+
+
+
+/*************************************************
+
+******************** 地址列表 ********************
+
+*************************************************/
+
+.addresslist-con {
+
+    padding: 0;
+
+}
+
+.per {
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    padding:5%;
+
+    width: 100%;
+
+    margin-bottom: 10px;
+
+    position: relative;
+
+}
+
+.per .add-left {
+
+    width: 90%;
+
+    float: left;
+
+}
+
+.per .con {
+
+    width: 100%;
+
+    float: left;
+
+    margin: 2% 0;
+
+}
+
+.per .peo-left,
+
+.per .address-left {
+
+    float: left;
+
+    width: 22%;
+
+    overflow: hidden;
+
+    font-size: 1.2rem;
+
+    font-weight: bold;
+
+    color: #3d3d3d;
+
+}
+
+.per .peo-right,
+
+.per .address-right {
+
+    float: left;
+
+    width: 78%;
+
+    padding-left: 5.4%;
+
+    font-size: 1.2rem;
+
+    color: #666;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+.per .add-right {
+
+    float: right;
+
+    position: absolute;
+
+    width: 10%;
+
+    right: 5%;
+
+    top: 30%;
+
+}
+
+.per .add-right a {
+
+    text-align: center;
+
+    float: right;
+
+    font-size: 1.1rem;
+
+    color: #999;
+
+}
+
+.per .add-right a i {
+
+    color: #83c4cc;
+
+    font-size: 1.6rem;
+
+}
+
+
+
+.address-commonuse .add-newaddress {
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    padding: 5%;
+
+    width: 100%;
+
+    margin-bottom: 10px;
+
+    position: relative;
+
+}
+
+.address-commonuse .add-newaddress span {
+
+    display:inline-block;
+
+    color: #a269ad;
+
+    padding-right: 5px;
+
+}
+
+.address-commonuse .content > a{
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    padding: 5%;
+
+    width: 100%;
+
+    margin-bottom: 10px;
+
+    position: relative;
+
+    display: block;
+
+    text-align: center;
+
+    color: #3d3d3d;
+
+    font-size: 1.2rem;
+
+}
+
+
+
+.address-add section {
+
+    padding: 10px;
+
+    font-size: 1.2rem;
+
+}
+
+.address-add .form-wrap {
+
+    margin-top: 14px;
+
+    padding: 4px 0;
+
+    background-color: #fff;
+
+    border-radius: 10px;
+
+}
+
+.address-add .form-wrap:first-child {
+
+    margin-top: 0;
+
+}
+
+.address-add .wrap {
+
+    position: relative;
+
+    padding: 14px;
+
+    width: 100%;
+
+    border-top: 1px solid #e5e5e5;
+
+}
+
+.address-add .wrap:first-child {
+
+    border: none;
+
+}
+
+.address-add .tip  {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 14px;
+
+    -webkit-transform: translateY(-50%);
+
+            transform: translateY(-50%);
+
+}
+
+.address-add .area  {
+
+    padding-left: 6rem;
+
+    font-size: 0;
+
+}
+
+.address-add .area .cell {
+
+    position: relative;
+
+    display: inline-block;
+
+    margin: 3px 8px 3px 0;
+
+    line-height: 1.4 !important;
+
+    font-size: 1.2rem;
+
+    border: 1px solid #d0d4d8;
+
+    border-radius: 4px;
+
+}
+
+.address-add .area .cell:last-child {
+
+    margin-right: 0;
+
+}
+
+.address-add .area .cell a {
+
+    display: inline-block;
+
+    padding: 0 6px;
+
+    min-width: 40px;
+
+    text-align: center;
+
+    border-right: 1px solid #d0d4d8;
+
+}
+
+.address-add .area .cell i {
+
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+
+}
+
+.address-add .area .cell i:after {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    margin-top: -8px;
+
+    margin-left: -4px;
+
+    width: 0;
+
+    height: 0;
+
+    border-width: 4px;
+
+    border-style: solid;
+
+    border-color: transparent;
+
+    border-top-color: #787878;
+
+    content: '';
+
+}
+
+.address-add #area {
+
+    display: block;
+
+    padding-bottom: 2px;
+
+    color: #666;
+
+    font-size: 1.16rem;
+
+}
+
+.address-add .wrap label {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 14px;
+
+    -webkit-transform: translateY(-50%);
+
+            transform: translateY(-50%);
+
+}
+
+.address-add .wrap .input-control {
+
+    padding-left: 6rem;
+
+    width: 100%;
+
+}
+
+.address-add .wrap .input-control .input-content {
+
+    position: relative;
+
+}
+
+.address-add .wrap input,
+
+.address-add .checkbox-wrap input {
+
+    width: 100%;
+
+    border: none;
+
+    box-shadow: none;
+
+    background-color: transparent;
+
+}
+
+.address-add input[type="checkbox"] {
+
+    width: auto;
+
+}
+
+.address-add .checkbox-wrap {
+
+    position: relative;
+
+    margin-top: 14px;
+
+    padding-left: 14px;
+
+}
+
+.address-add .checkbox-wrap label {
+
+    padding-left: 24px;
+
+}
+
+.address-add .checkbox-wrap input,
+
+.address-add .checkbox-wrap .icheckbox_flat {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 14px;
+
+    margin-top: -8px;
+
+    width: 16px;
+
+    height: 16px;
+
+    background: url('http://wxsc.wei-mei.com/weimei/Public/images/checkbox.png') no-repeat 0 0;
+
+    background-size: auto 16px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+}
+
+/* .address-add .checkbox-wrap .icheckbox_flat:hover,
+
+.address-add .checkbox-wrap .icheckbox_flat.hover,*/
+
+.address-add .checkbox-wrap .icheckbox_flat.checked {
+
+    background-position: 100% 0;
+
+}
+
+.address-add .submit {
+
+    margin-top: 24px;
+
+}
+
+
+
+/*************************************************
+
+******************** 管家提醒 ********************
+
+*************************************************/
+
+.keeperwarn-con {
+
+    width: 100%;
+
+    background: #eee;
+
+}
+
+.keeperwarn-con .warn-con {
+
+    padding: 15px 0;
+
+    background: #fff;
+
+    font-size: 1rem;
+
+    border-radius: 10px;
+
+    padding-bottom: 45%;
+
+}
+
+.keeperwarn-con .warn-con h3 {
+
+    font-size: 1.4rem;
+
+    color: #7e2e8d;
+
+    font-weight: bold;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #eee;
+
+    padding-left: 15px;
+
+}
+
+.keeperwarn-con .warn-con p {
+
+    margin-top: 15px;
+
+    letter-spacing: 1px;
+
+    line-height: 1.5em;
+
+    font-size: 1.2rem;
+
+    color: #666;
+
+    padding: 0 15px;
+
+}
+
+
+
+/*************************************************
+
+******************** 我的管家 ********************
+
+*************************************************/
+
+.mykeeper-con,
+
+.vipinfo-con {
+
+border-radius: 10px;
+
+    background: #fff;
+
+    margin-top: 10px;
+
+}
+
+.mykeeper-con ul li,
+
+.vipinfo-con ul li {
+
+    position: relative;
+
+    border-bottom: 1px solid #eee;
+
+    width: 86%;
+
+    box-sizing: content-box;
+
+    padding: 0 7%;
+
+}
+
+.mykeeper-con ul li .bot-left {
+
+    position: relative;
+
+        width: 90%;
+
+    float: left;
+
+    color: #333;
+
+    font-size: 1.2rem;
+
+}
+
+.mykeeper-con ul li .bot-right {
+
+    width: 10%;
+
+    float: right;
+
+    color: #999;
+
+    font-size: 1.1rem;
+
+    display: block;
+
+    padding: 1.5rem 0;
+
+}
+
+.mykeeper-con ul li .bot-left .ico-right {
+
+    float: left;
+
+    display: block;
+
+    padding: 1.5rem 4rem;
+
+    width: 100%;
+
+    font-size: 1.2rem;
+
+
+
+}
+
+.mykeeper-con  .ico ,.vipinfo-con ul li .ico {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 13.7%;
+
+    height: 100%;
+
+}
+
+.mykeeper-con .ico:before,.vipinfo-con ul li .ico:before {
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 10px;
+
+    margin-top: -11.5px;
+
+    width: 20px;
+
+    height: 20px;
+
+    background: url('http://wxsc.wei-mei.com/weimei/Public/images/mykeeper_ico.png') no-repeat 0 0;
+
+    background-size: 20px;
+
+    content: '';
+
+}
+
+
+
+/*************************************************
+
+******************** 我的订单 ********************
+
+*************************************************/
+
+.myorder-bot {
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    padding: 6% 0;
+
+    margin-top: 10px;
+
+}
+
+.myorder-bot .myorder-bot-left {
+
+    width: 50%;
+
+    float: left;
+
+    text-align: center;
+
+}
+
+.myorder-bot .myorder-bot-left a,
+
+.myorder-bot .myorder-bot-right a {
+
+    font-size: 1.2rem;
+
+    color: #666;
+
+}
+
+.myorder-bot .myorder-bot-left .bg-border {
+
+    position: relative;
+
+    width: 37.5%;
+
+     padding-top: 37.5%;
+
+    border:1px solid #67b7c1;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    height: 0;
+
+    display: block;
+
+    margin-bottom: 7%;
+
+}
+
+.myorder-bot .myorder-bot-left span img {
+
+    position: absolute;
+
+    top: 50%;
+
+    width: 61%;
+
+    left: 20%;
+
+    -webkit-transform: translateY(-50%);
+
+    transform: translateY(-50%);
+
+}
+
+.myorder-bot .myorder-bot-right{
+
+    width: 50%;
+
+    float: right;
+
+    text-align: center;
+
+}
+
+.myorder-bot .myorder-bot-right .bg-border {
+
+    position: relative;
+
+    width: 37.5%;
+
+    padding-top: 37.5%;
+
+    border:1px solid #e7a8f4;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    height: 0;
+
+    display: block;
+
+    margin-bottom: 7%;
+
+}
+
+.myorder-bot .myorder-bot-right span img {
+
+    position: absolute;
+
+    width: 50%;
+
+    top: 50%;
+
+    left: 25%;
+
+    -webkit-transform: translateY(-50%);
+
+    transform: translateY(-50%);
+
+}
+
+.myorder-bot .myorder-bot-right a i {
+
+    font-size: 1.5rem;
+
+}
+
+.myorder-bot .myorder-bot-right .border-left {
+
+    border-left: 1px solid #be96c6;
+
+}
+
+
+
+/*************************************************
+
+******************** 支付部分 ********************
+
+*************************************************/
+
+.pay-succeed-con {
+
+    padding-top: 0 !important;
+
+}
+
+.pay-succeed-con .button-bot {
+
+    width: 50%;
+
+    margin: 20px 25%;
+
+}
+
+.pay-succeed-con .button-top {
+
+    margin-bottom: 5px;
+
+}
+
+.pay-succeed-con .button-bot a {
+
+    display: inline-block;
+
+    border-radius: 20px;
+
+    color: #fff;
+
+    font-size: 1.2rem;
+
+    padding: 8px;
+
+    text-align: center;
+
+    box-shadow: 0 2px 0 0 #828282;
+
+    background: #dc7def;
+
+    width: 100%;
+
+    font-weight: bold;
+
+}
+
+
+
+.payway-con section {
+
+    width: 100%;
+
+    background: #fff;
+
+    border-radius: 10px;
+
+}
+
+.payway:first-child {
+
+    border: none;
+
+}
+
+.payway {
+
+    position: relative;
+
+    padding: 5% 5% 5% 20%;
+
+    border-top: 1px solid #eee;
+
+    background-color: transparent;
+
+}
+
+.payway .payway-left {
+
+    width: 90%;
+
+    float: left;
+
+}
+
+.payway .payway-left a {
+
+    font-size: 1.4rem;
+
+    color: #2d2d2d;
+
+}
+
+.payway .payway-left a span {
+
+    font-size: 1.1rem;
+
+    color: #999999;
+
+    display: block;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+}
+
+.payway .payway-right {
+
+    width: 10%;
+
+    float: right;
+
+    padding-top: 2%;
+
+}
+
+.payway .payway-right img {
+
+    width: 90%;
+
+}
+
+.payway .payway-left .ico {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 20%;
+
+    height: 100%;
+
+}
+
+.payway .payway-left .ico:before {
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 10px;
+
+    margin-top: -25px;
+
+    width: 70%;
+
+    height: 70%;
+
+    background: url('http://wxsc.wei-mei.com/weimei/Public/images/pay.png') no-repeat 0 0;
+
+    background-size: 100%;
+
+    content: '';
+
+}
+
+.payway:nth-of-type(2) .payway-left .ico:before {
+
+    background-position: 0 100%;
+
+}
+
+
+
+/*************************************************
+
+******************** 我的会员 ********************
+
+*************************************************/
+
+.myvip-bot {
+
+   background: #fff;
+
+    border-radius: 10px;
+
+    padding: 10% 5%;
+
+    margin-top: 10px;
+
+}
+
+.myvip-bot ul li {
+
+    width: 33.3%;
+
+    text-align: center;
+
+    float: left;
+
+}
+
+.myvip-bot ul li a {
+
+    font-size: 1.2rem;
+
+    color: #666;
+
+}
+
+.myvip-bot ul li a .bg-border {
+
+    display: block;
+
+    width: 54%;
+
+    position: relative;
+
+    padding-top: 54%;
+
+    height: 0;
+
+    border-radius: 100%;
+
+    margin: auto;
+
+    margin-bottom: 7%;
+
+}
+
+.myvip-bot ul li:nth-child(1) a .bg-border {
+
+    border: 1px solid #ffb541;
+
+}
+
+.myvip-bot ul li:nth-child(2) a .bg-border {
+
+    border: 1px solid #67b7c1;
+
+}
+
+.myvip-bot ul li:nth-child(3) a .bg-border {
+
+    border: 1px solid #e5a1f3;
+
+}
+
+.myvip-bot ul li .bg-border img {
+
+    position: absolute;
+
+    width: 50%;
+
+    top: 25%;
+
+    left: 25%;
+
+}
+
+
+
+/*************************************************
+
+******************** 会员信息 ********************
+
+*************************************************/
+
+.vipinfo-con ul li .ico:before {
+
+    background: url('http://wxsc.wei-mei.com/weimei/Public/images/vipinfo_ico.png') no-repeat 0 0;
+
+}
+
+.mykeeper-con ul li:nth-of-type(2) .ico:before {
+
+    background-position: 0 24.6%;
+
+    height: 25px;
+
+}
+
+.mykeeper-con ul li:nth-of-type(3) .ico:before {
+
+    background-position: 0 50%;
+
+}
+
+.mykeeper-con ul li:nth-of-type(4) .ico:before {
+
+    background-position: 0 75%;
+
+    height: 25px;
+
+}
+
+.mykeeper-con ul li:nth-of-type(5) .ico:before {
+
+    background-position: 0 100%;
+
+}
+
+.mykeeper-con .ico:after,
+
+.vipinfo-con ul li .ico:after {
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 0;
+
+    margin-top: -7px;
+
+    width: 1px;
+
+    height: 14px;
+
+    background-color: #999;
+
+    box-shadow: 0 0 1px rgba(0,0,0,.2);
+
+    content: '';
+
+}
+
+
+
+.vipinfo-con ul li:nth-of-type(2) .ico:before {
+
+    background-position: 0 34%;
+
+}
+
+.vipinfo-con ul li:nth-of-type(3) .ico:before {
+
+    background-position: 0 66.8%;
+
+}
+
+.vipinfo-con ul li:nth-of-type(4) .ico:before {
+
+    background-position: 0 100%;
+
+    width: 23px;
+
+}
+
+
+
+.vipinfo-con ul li .ico-right {
+
+    float: left;
+
+    display: block;
+
+    padding: 1rem 3rem;
+
+    width: 100%;
+
+    font-size: 1.2rem;
+
+    color: #333;
+
+
+
+}
+
+.vipinfo-con ul li .ico-right span {
+
+    display: inline-block;
+
+    padding: 0 3rem;
+
+    font-size: 1.1rem;
+
+    color: #666;
+
+
+
+}
+
+
+
+/*************************************************
+
+******************** 订单信息 ********************
+
+*************************************************/
+
+.order-con {
+
+    width: 100%;
+
+    background: #eee;
+
+}
+
+#swiper-nav .swiper-slide {
+
+    display: block;
+
+    padding: 4% 0;
+
+    width: 50%;
+
+    color: #7e2e8d;
+
+    font-size: 1.4rem;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    background-color: #fff;
+
+    border: 1px solid #999;
+
+    border-left-width: 0;
+
+    border-right-width: 0;
+
+    border-radius: 0;
+
+    white-space: nowrap;
+
+    -webkit-user-select: none;
+
+            user-select: none;
+
+    -webkit-transition: all .3s ease;
+
+            transition: all .3s ease;
+
+}
+
+#swiper-nav .swiper-slide:first-child {
+
+    border-left-width: 1px;
+
+    border-top-left-radius: 10px;
+
+    border-bottom-left-radius: 10px;
+
+}
+
+#swiper-nav .swiper-slide:last-child {
+
+    border-right-width: 1px;
+
+    border-top-right-radius: 10px;
+
+    border-bottom-right-radius: 10px;
+
+}
+
+#swiper-nav .active-nav {
+
+    color: #fff;
+
+    background-color: #999;
+
+}
+
+#swiper-container {
+
+    margin-top: 14px;
+
+}
+
+.per-ordering {
+
+    margin-top: 14px;
+
+    padding: 16px 0;
+
+    width: 100%;
+
+    background: #fff;
+
+    border-radius: 10px;
+
+}
+
+.per-ordering:first-child {
+
+    margin-top: 0;
+
+}
+
+.per-ordering h5 {
+
+    color: #999;
+
+    font-size: 1.1rem;
+
+    padding: 0 10px;
+
+}
+
+.per-ordering h3 {
+
+    color: #7e2e8d;
+
+    font-size: 3rem;
+
+    margin-top: 14px;
+
+    padding: 0 10px 6px;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+.per-ordering a {
+
+    color: #666;
+
+    font-size: 1.1rem;
+
+    padding: 10px;
+
+    display:block;
+
+    border-bottom: 1px solid #eee;
+
+    font-weight: bold;
+
+}
+
+.per-ordering a.ser-item {
+
+    color: #83c4cc;
+
+}
+
+.per-ordering .button-top,
+
+.per-ordering .period {
+
+    width: 81%;
+
+    margin: auto;
+
+    margin-top: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+.per-ordering .button-top li,
+
+.per-ordering .period li {
+
+    width: 50%;
+
+    float: left;
+
+    text-align: center;
+
+}
+
+.per-ordering .button-top li a,
+
+.per-ordering .period a:first-child {
+
+    background: #6bbcc6;
+
+    display: inline-block;
+
+    border-radius: 20px;
+
+    color: #fff;
+
+    font-size: 1.2rem;
+
+    padding: 8px;
+
+    text-align: center;
+
+    box-shadow: 0 2px 0 0 #828282;
+
+    font-weight: normal;
+
+    width: 90%;
+
+    -webkit-user-select: none;
+
+            user-select: none;
+
+}
+
+.per-ordering .button-bot {
+
+    width: 50%;
+
+    margin-left: 25%;
+
+    -webkit-user-select: none;
+
+            user-select: none;
+
+}
+
+.per-ordering .button-bot a,
+
+.per-ordering .period a:last-child {
+
+    display: inline-block;
+
+    border-radius: 20px;
+
+    color: #fff;
+
+    font-size: 1.2rem;
+
+    padding: 8px;
+
+    text-align: center;
+
+    box-shadow: 0 2px 0 0 #828282;
+
+    background: #dc7def;
+
+    width: 100%;
+
+}
+
+.per-ordering .period li a:first-child {}
+
+.per-ordering .period a:last-child {
+
+    width: 90%;
+
+}
+
+
+
+/*************************************************
+
+********************* 维美币 *********************
+
+*************************************************/
+
+.balance #swiper-nav .swiper-slide {
+
+    width: 33.333333%;
+
+}
+
+.balance .context {
+
+    background-color: #fff;
+
+    border-radius: 10px;
+
+}
+
+.balance .context .coins-info {
+
+    position: relative;
+
+    padding: 20px 24px;
+
+    border-top: 1px solid #eee;
+
+}
+
+.balance .context .coins-info .coins {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 24px;
+
+    margin-top: -28px;
+
+    width: 56px;
+
+    height: 56px;
+
+    line-height: 56px !important;
+
+    text-align: center;
+
+    color: #7e2e8d;
+
+    font-size: 2.4rem;
+
+    white-space: nowrap;
+
+    border-radius: 50%;
+
+    /*border: 2px solid #7e2e8d;
+
+    border-bottom-color: #e383f5;*/
+
+}
+
+.balance .context .coins-info .coins:before {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: url('http://wxsc.wei-mei.com/weimei/Public/images/ring.png') no-repeat;
+
+    background-size: contain;
+
+    content: '';
+
+}
+
+.balance .context .coins-info .info {
+
+    padding-left: 80px;
+
+    font-size: 0;
+
+    white-space: nowrap;
+
+}
+
+.balance .context .coins-info .info .con-l,
+
+.balance .context .coins-info .info .con-r {
+
+    font-size: 1.4rem;
+
+    white-space: nowrap;
+
+}
+
+.balance .context .coins-info .info .con-t,
+
+.balance .context .coins-info .info .con-b {
+
+    display: block;
+
+    line-height: 1.3em !important;
+
+    font-size: 1.4rem;
+
+}
+
+.balance .context .coins-info .info .con-t {
+
+    color: #555;
+
+}
+
+.balance .context .coins-info .info .con-t em {
+
+    color: #83c4cc;
+
+}
+
+.balance .context .coins-info .info .con-b {
+
+    color: #999;
+
+}
+
+.balance .context .coins-info .info i {
+
+    display: none;
+
+}
+
+.balance .context .coins-info .info:after,
+
+.balance .context .coins-info .info .con-l:after,
+
+.balance .context .coins-info .info .con-r:after {
+
+    display: block;
+
+    clear: both;
+
+    content: '';
+
+}
+
+/* 320---0.5 */
+
+@media screen and (min-width: 320px) {
+
+}
+
+/* 360---0.5625 */
+
+@media screen and (min-width: 350px) {
+
+    .balance .context .coins-info {
+
+        padding: 20px 12px;
+
+    }
+
+    .balance .context .coins-info .coins {
+
+        left: 12px;
+
+        margin-top: -25px;
+
+        width: 50px;
+
+        height: 50px;
+
+        line-height: 50px !important;
+
+        font-size: 1.6rem;
+
+    }
+
+    .balance .context .coins-info .info {
+
+        padding-left: 58px;
+
+    }
+
+    .balance .context .coins-info .info .con-t {
+
+        display: inline-block;
+
+        width: 44%;
+
+        font-size: 1.2rem;
+
+    }
+
+    .balance .context .coins-info .info .con-t em {
+
+        font-size: 1.3rem;
+
+    }
+
+    .balance .context .coins-info .info .con-b {
+
+        display: inline-block;
+
+        font-size: 1.1rem;
+
+    }
+
+}
+
+/* 380---0.59375 */
+
+@media screen and (min-width: 370px) {
+
+}
+
+/* 410---0.640625 */
+
+@media screen and (min-width: 400px) {
+
+    .balance .context .coins-info {
+
+        padding: 22px 18px;
+
+    }
+
+    .balance .context .coins-info .coins {
+
+        left: 16px;
+
+    }
+
+    .balance .context .coins-info .info {
+
+        padding-left: 58px;
+
+    }
+
+    .balance .context .coins-info .info .con-l {
+
+        display: inline-block;
+
+        margin-right: 8px;
+
+    }
+
+    .balance .context .coins-info .info .con-r {
+
+        display: inline-block;
+
+    }
+
+    .balance .context .coins-info .info .con-t {
+
+        float: none;
+
+        display: inline-block;
+
+        width: auto;
+
+    }
+
+    .balance .context .coins-info .info .con-b {
+
+        float: none;
+
+        display: inline-block;
+
+        padding-top: 6px;
+
+    }
+
+    .balance .context .coins-info .info i {
+
+        display: block;
+
+    }
+
+}
+
+
+
+/*************************************************
+
+******************** 账户管理 ********************
+
+*************************************************/
+
+.account-con {
+
+    width: 100%;
+
+    background: #eee;
+
+}
+
+.account-top {
+
+    width: 100%;
+
+    border-radius: 12px;
+
+}
+
+.account-top a.bg-pic {
+
+    width: 100%;
+
+    position: relative;
+
+    height: 0;
+
+    display: block;
+
+    padding-top: 54%;
+
+    overflow: hidden;
+
+    height: 100%;
+
+}
+
+.account-top a.bg-pic > img:first-child {
+
+    position: absolute;
+
+    width: 100%;
+
+    top: 0;
+
+    border-radius: 10px;
+
+}
+
+.account-top a.bg-pic .person {
+
+    width: 32%;
+
+    padding: 6% 34% 5% 34%;
+
+    position: absolute;
+
+    top: 0;
+
+    box-sizing: content-box;
+
+    text-align: center;
+
+    overflow: hidden;
+
+}
+
+.account-top a.bg-pic .person .avatar {
+
+    display: block;
+
+    position: relative;
+
+}
+
+.account-top a.bg-pic .person .avatar:after,
+
+.account-top a.bg-pic .person .avatar:before {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    content: '';
+
+    border: 4px solid #fff;
+
+    border-radius: 50%;
+
+}
+
+.account-top a.bg-pic .person .avatar:before {
+
+    border-color: transparent;
+
+    box-shadow: 0 0 16px rgba(167,41,187,.15),
+
+                0 0 10px rgba(167,41,187,.14),
+
+                0 0 6px rgba(167,41,187,.13),
+
+                0 0 2px rgba(167,41,187,.3);
+
+}
+
+.account-top a.bg-pic .person .avatar:after {
+
+    box-shadow: 0 0 16px rgba(0,0,0,.12) inset,
+
+                0 0 8px rgba(0,0,0,.18) inset,
+
+                0 0 3px rgba(167,41,187,.2) inset;
+
+}
+
+.account-top a.bg-pic .person img {
+
+    width: 100%;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+}
+
+.account-top a.bg-pic .name {
+
+    display: inline-block;
+
+    padding-top: 5px;
+
+    color: #000;
+
+    font-size: 1.1rem;
+
+    border-bottom: 1px solid #000;
+
+    padding: 5px 0;
+
+    position: relative;
+
+    font-weight: bold;
+
+}
+
+
+
+
+
+/*************************************************
+
+**************************************************
+
+******************* 打赏、评价 ********************
+
+**************************************************
+
+*************************************************/
+
+.reward section {
+
+    margin-top: 18px;
+
+    padding-top: 8px;
+
+    padding-bottom: 30px;
+
+    background-color: #fff;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+.reward section:first-child {
+
+    margin-top: 0;
+
+}
+
+.reward .title {
+
+    position: relative;
+
+    margin-bottom: 22px;
+
+    color: #7e2e8d;
+
+    font-size: 1.4rem;
+
+    font-weight: bold;
+
+    border-bottom: 1px solid #eee;
+
+    padding: 2% 10px;
+
+}
+
+.reward .group-container {
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 0;
+
+    font-size: 0;
+
+    font-weight: normal;
+
+    -webkit-transform: translateY(-50%);
+
+            transform: translateY(-50%);
+
+}
+
+.reward .swiper-wrapper {
+
+    font-size: 0;
+
+}
+
+.reward .group-container .group {
+
+    display: inline-block !important;
+
+    padding: 2px 8px !important;
+
+    color: #d76aeb !important;
+
+    font-size: 1.15rem !important;
+
+    font-weight: normal !important;
+
+    border: none !important;
+
+    border-radius: 0 !important;
+
+    -webkit-transition: all .3s ease;
+
+    transition: all .3s ease;
+
+    -webkit-user-select: none;
+
+    -moz-user-select: none;
+
+    -ms-user-select: none;
+
+    -o-user-select: none;
+
+    user-select: none;
+
+}
+
+.reward .group-container .group.active,
+
+.reward .group-container .group.active-nav {
+
+    color: #fff !important;
+
+    background-color: #d76aeb !important;
+
+}
+
+.swiper-reward {
+
+    position: relative;
+
+    padding: 0 28px;
+
+}
+
+.swiper-reward .swiper-container {
+
+    overflow: hidden;
+
+}
+
+.swiper-reward .swiper-slide {
+
+    position: relative;
+
+    padding-top: 40%;
+
+    height: 0;
+
+}
+
+.swiper-reward .swiper-slide > img {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+.swiper-reward .name {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    padding: 5px;
+
+    width: 100%;
+
+    color: #fff;
+
+    font-size: 1.1rem;
+
+    text-align: center;
+
+    letter-spacing: 1px;
+
+    background-color: rgba(0,0,0,.6);
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
+}
+
+.swiper-reward .cover {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    color: #d76aeb;
+
+    font-size: 1.1rem;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    letter-spacing: 1px;
+
+    background-color: rgba(255,255,255,.5);
+
+    -webkit-user-select: none;
+
+    -moz-user-select: none;
+
+    -ms-user-select: none;
+
+    -o-user-select: none;
+
+    user-select: none;
+
+    -webkit-transition: all .3s ease;
+
+    transition: all .3s ease;
+
+    visibility: hidden;
+
+    opacity: 0;
+
+}
+
+.swiper-reward .cover .item {
+
+    display: inline-block;
+
+}
+
+.swiper-reward .cover img,
+
+.swiper-reward .cover span {
+
+    display: block;
+
+}
+
+.swiper-reward .cover span {
+
+    margin-top: 8px;
+
+}
+
+.swiper-reward .selected .cover {
+
+    visibility: visible;
+
+    opacity: 1;
+
+}
+
+.swiper-button-next,
+
+.swiper-button-prev {
+
+    width: 27px;
+
+    height: 44px;
+
+    margin-top: -22px;
+
+}
+
+.swiper-button-prev,
+
+.swiper-container-rtl .swiper-button-next {
+
+    background-image: url('http://wxsc.wei-mei.com/weimei/Public/images/pre.png');
+
+    left: 0;
+
+    right: auto;
+
+}
+
+.swiper-button-next,
+
+.swiper-container-rtl .swiper-button-prev {
+
+    background-image: url('http://wxsc.wei-mei.com/weimei/Public/images/next.png');
+
+    right: 0;
+
+    left: auto;
+
+}
+
+.reward #rewarding {
+
+    display: block;
+
+    margin: 0 auto;
+
+    margin-top: 20px;
+
+    padding: 8px;
+
+    width: 46%;
+
+    font-size: 1.3rem;
+
+    color: #fff;
+
+    text-align: center;
+
+    background-color: #d76aeb;
+
+    box-shadow: 0 2px 0 0 rgba(0,0,0,.45);
+
+    border-radius: 20px;
+
+    -webkit-user-select: none;
+
+    -moz-user-select: none;
+
+    -ms-user-select: none;
+
+    -o-user-select: none;
+
+    user-select: none;
+
+}
+
+.reward .coins {
+
+    padding: 0 10px;
+
+    font-size: 0;
+
+}
+
+.reward .coins .cell {
+
+    display: inline-block;
+
+    width: 16.666667%;
+
+    text-align: center;
+
+}
+
+.reward .coins .cell span {
+
+    position: relative;
+
+    display: block;
+
+    margin: 0 auto;
+
+    width: 74.888888%;
+
+    padding-top: 74.888888%;
+
+}
+
+.reward .coins .cell a {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 1px solid #999;
+
+    border-radius: 100%;
+
+    color: #999;
+
+    font-size: 1.78rem;
+
+    -webkit-transition: all .3s ease;
+
+    transition: all .3s ease;
+
+}
+
+.reward .coins .cell a.selected {
+
+    border: 1px solid #7e2e8d;
+
+    color: #7e2e8d;
+
+}
+
+.appraisal {
+
+    font-size: 1.2rem;
+
+    color: #666;
+
+}
+
+.appraisal section {
+
+    padding-top: .3rem;
+
+    padding-bottom: 1.385rem;
+
+    border-radius: 10px;
+
+    background-color: #fff;
+
+}
+
+.appraisal section .wrap {
+
+    padding: 1.23rem 1.385rem .92rem;
+
+    border-top: 1px solid #eee;
+
+}
+
+.appraisal section .wrap:first-child {
+
+    border: none;
+
+}
+
+.appraisal section .wrap textarea {
+
+    display: block;
+
+    margin-top: .615rem;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: .615rem .92rem;
+
+}
+
+.appraisal section .wrap .star i {
+
+    margin-right: 6px;
+
+    -webkit-transition: color .28s ease-in;
+
+    transition: color .28s ease-in;
+
+}
+
+.appraisal section .wrap .star i.light {
+
+    color: #d76aeb;
+
+}
+
+.submit {
+
+    display: block;
+
+    margin: 0 auto;
+
+    margin-top: 20px;
+
+    padding: 8px;
+
+    width: 46%;
+
+    font-size: 1.3rem;
+
+    color: #fff;
+
+    text-align: center;
+
+    background-color: #d76aeb !important;
+
+    box-shadow: 0 2px 0 0 rgba(0,0,0,.45);
+
+    border-radius: 20px !important;
+
+    -webkit-user-select: none;
+
+    -moz-user-select: none;
+
+    -ms-user-select: none;
+
+    -o-user-select: none;
+
+    user-select: none;
+
+}
+
+
+
+/*************************************************
+
+**************************************************
+
+***************** 预约上门、到院 ******************
+
+**************************************************
+
+*************************************************/
+
+.reservation section {
+
+    padding: .35rem 0;
+
+    border-radius: 10px;
+
+    background-color: #fff;
+
+}
+
+.reservation .wrap {
+
+    position: relative;
+
+    padding-left: 13.7%;
+
+    border-top: 1px solid #eee;
+
+    background-color: transparent;
+
+}
+
+.reservation .wrap:first-child {
+
+    border: none;
+
+}
+
+.reservation .wrap .ico {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 13.7%;
+
+    height: 100%;
+
+}
+
+.reservation .wrap .ico:before {
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 10px;
+
+    margin-top: -11.5px;
+
+    width: 20px;
+
+    height: 20px;
+
+    background: url('http://wxsc.wei-mei.com/weimei/Public/images/icons.png') no-repeat 0 0;
+
+    background-size: 20px;
+
+    content: '';
+
+}
+
+.reservation .wrap.name .ico:before {
+
+    background-position: 0 0;
+
+}
+
+.reservation .wrap.gender .ico:before {
+
+    background-position: 0 12.5%;
+
+}
+
+.reservation .wrap.mobile .ico:before {
+
+    background-position: 0 25%;
+
+}
+
+.reservation .wrap.code .ico:before {
+
+    background-position: 0 37.5%;
+
+}
+
+.reservation .wrap.address .ico:before {
+
+    background-position: 0 50%;
+
+}
+
+.reservation .wrap.coins .ico:before {
+
+    background-position: 0 62.5%;
+
+}
+
+.reservation .wrap.remark .ico:before {
+
+    background-position: 0 75%;
+
+}
+
+.reservation .wrap.service .ico:before {
+
+    background-position: 0 87.5%;
+
+}
+
+.reservation .wrap.time .ico:before {
+
+    background-position: 0 100%;
+
+}
+
+.reservation .wrap .ico:after {
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 0;
+
+    margin-top: -7px;
+
+    width: 1px;
+
+    height: 14px;
+
+    background-color: #999;
+
+    box-shadow: 0 0 1px rgba(0,0,0,.2);
+
+    content: '';
+
+}
+
+.reservation .wrap #verify,
+
+.reservation .wrap #verifyy {
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 6.6%;
+
+    padding: 4px 8px;
+
+    color: #666;
+
+    border: 1px solid #999;
+
+    -webkit-transform: translateY(-50%);
+
+            transform: translateY(-50%);
+
+}
+
+.reservation .wrap #contextBtn,
+
+.reservation .wrap #dataTime {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+}
+
+.reservation .wrap .input-content {
+
+    position: relative;
+
+}
+
+.reservation .wrap input {
+
+    float: left;
+
+    padding: 1rem 1.1rem;
+
+    width: 100%;
+
+    border: none;
+
+    box-shadow: none;
+
+    background-color: transparent;
+
+}
+
+.reservation .wrap:after,
+
+.reservation .wrap .input-content:after {
+
+    display: block;
+
+    clear: both;
+
+    content: '';
+
+}
+
+.reservation.hospital section {
+
+    padding-top: 20px;
+
+    padding-bottom: 28px;
+
+    background-color: #f7f7f7;
+
+    box-shadow: 0px 0px 3px rgba(126, 46, 141, 0.7);
+
+}
+
+.reservation.hospital .wrap {
+
+    margin-bottom: 16px;
+
+    padding: 0 6.66666667%;
+
+    border: none;
+
+}
+
+.reservation.hospital .wrap label {
+
+    color: #444;
+
+    font-size: 1.2rem;
+
+    font-weight: bold;
+
+}
+
+.reservation.hospital .wrap .control {
+
+    position: relative;
+
+    margin-top: 8px;
+
+    background-color: #fff;
+
+    border: 1px solid #e0e0e0;
+
+    border-radius: 10px;
+
+}
+
+.reservation.hospital .wrap .form-control {
+
+    position: relative;
+
+    padding-left: 13.7%;
+
+    border-radius: 10px;
+
+}
+
+.reservation.hospital .wrap .control input {
+
+    float: none;
+
+    padding-left: 12px;
+
+    background-color: transparent;
+
+    border-radius: 10px;
+
+}
+
+.reservation.hospital .wrap .ico:before {
+
+    right: 12px;
+
+}
+
+.reservation.hospital .wrap .ico:after {
+
+    margin-top: -8px;
+
+    width: 1px;
+
+    height: 16px;
+
+    box-shadow: 0 0 1px rgba(0,0,0,.3);
+
+}
+
+.reservation.hospital .submit {
+
+    padding: 10px;
+
+    background-color: #58b1bc !important;
+
+}
+
+.context-layout {
+
+    padding: 0 12px;
+
+}
+
+.context-layout li {
+
+    margin-top: 2px;
+
+    padding: 4px 14px;
+
+    min-width: 160px;
+
+    -webkit-transition: all .2s ease;
+
+    transition: all .2s ease;
+
+    border-radius: 4px;
+
+}
+
+.context-layout li:first-child {
+
+    margin-top: 0;
+
+}
+
+.context-layout li.active {
+
+    background-color: #eee;
+
+}
+
+.time-wrapper .layermcont {
+
+    padding: 0;
+
+    text-align: left;
+
+}
+
+.time-container .time-control {
+
+    position: relative;
+
+    padding: 14px 0;
+
+    color: #f66;
+
+    font-weight: bold;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+.time-container .time-control #day {
+
+    display: block;
+
+    font-size: 16px;
+
+    text-align: center;
+
+}
+
+.time-container .time-control .day {
+
+    position: absolute;
+
+    top: 50%;
+
+    -webkit-transform: translateY(-50%);
+
+            transform: translateY(-50%);
+
+}
+
+.time-container .disabled {
+
+    opacity: .5;
+
+    pointer-events: none;
+
+}
+
+.time-container .time-control .day i {
+
+    font-size: 16px;
+
+    vertical-align: middle;
+
+}
+
+.time-container .time-control .day.prev {
+
+    left: 20px;
+
+}
+
+.time-container .time-control .day.next {
+
+    right: 20px;
+
+}
+
+.time-container .time-layout {
+
+    padding: 10px 10px 16px;
+
+}
+
+.time-container .time-layout li {
+
+    display: inline-block;
+
+    margin-bottom: 2px;
+
+    padding: 8px 10px;
+
+    width: 20%;
+
+    line-height: 1em;
+
+    color: #666;
+
+    text-align: center;
+
+    -webkit-transition: all .2s ease;
+
+    transition: all .2s ease;
+
+}
+
+.time-container .time-layout li.active {
+
+    color: #fff;
+
+    background-color: #d769eb;
+
+}
+
+
+
+
+
+/*************************************************
+
+**************************************************
+
+**************** 注册、登录、密码 *****************
+
+**************************************************
+
+*************************************************/
+
+.single {
+
+    background: #5f3558 url('http://wxsc.wei-mei.com/weimei/Public/images/single.jpg') no-repeat;
+
+    background-size: cover;
+
+}
+
+.single .logo,
+
+.single form,
+
+.single .btn-wrap {
+
+    margin: 0 auto;
+
+    width: 68%;
+
+}
+
+.single .btn-wrap {
+
+    padding-left: 14px;
+
+}
+
+.single .btn-wrap a {
+
+    display: block;
+
+    margin: 0 auto;
+
+    margin-top: 20px;
+
+    padding: 8px;
+
+    width: 100%;
+
+    font-size: 1.5rem;
+
+    color: #fff;
+
+    text-align: center;
+
+    background-color: transparent;
+
+    box-shadow: 0 2px 0 0 rgba(0,0,0,.45);
+
+    border: 1px solid #fff;
+
+    border-radius: 20px;
+
+}
+
+.single .logo {
+
+    position: relative;
+
+    margin-bottom: 3.86rem;
+
+    padding-top: 36.25%;
+
+}
+
+.single .logo img {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+}
+
+.single .logo {
+
+    margin-bottom: 70px;
+
+}
+
+@media screen and (min-width: 340px) {
+
+    .single .logo {
+
+        margin-bottom: 70px;
+
+    }
+
+}
+
+@media screen and (min-width: 350px) {
+
+    .single .logo {
+
+        margin-bottom: 80px;
+
+    }
+
+}
+
+@media screen and (min-width: 370px) {
+
+    .single .logo {
+
+        margin-bottom: 110px;
+
+    }
+
+}
+
+@media screen and (min-width: 400px) {
+
+    .single .logo {
+
+        margin-bottom: 140px;
+
+    }
+
+}
+
+.single form {
+
+    padding-left: 14px;
+
+    color: #fff;
+
+    font-size: 1.2rem;
+
+}
+
+.single section {
+
+    width: 100%;
+
+}
+
+.single form .control {
+
+    position: relative;
+
+    margin-bottom: 16px;
+
+}
+
+.single form .control input {
+
+    padding: 8px 10px;
+
+    padding-left: 40px;
+
+    height: 36px;
+
+    width: 100%;
+
+    line-height: 18px;
+
+    color: #fff;
+
+    border-radius: 20px;
+
+    border: 1px solid #fff;
+
+    background-color: transparent;
+
+}
+
+.single form .control input:focus {
+
+    border-color: #936;
+
+}
+
+.single form .control .ico {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 12px;
+
+    margin-top: -9px;
+
+    width: 18px;
+
+    height: 18px;
+
+    background: url('http://wxsc.wei-mei.com/weimei/Public/images/icons_login.png') no-repeat 0 0;
+
+    background-size: 18px;
+
+}
+
+.single form .control.mobile .ico {
+
+    background-position: 0 0;
+
+}
+
+.single form .control.sns-code .ico {
+
+    background-position: 0 50%;
+
+}
+
+.single form .control.password .ico {
+
+    background-position: 0 100%;
+
+}
+
+.single form .control .ico:after {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 100%;
+
+    margin-top: -3%;
+
+    margin-left: 6px;
+
+    width: 1px;
+
+    height: 106%;
+
+    background-color: #fff;
+
+    content: '';
+
+}
+
+.single form .control a {
+
+    position: absolute;
+
+    top: 50%;
+
+    right: 20px;
+
+    -webkit-transform: translateY(-50%);
+
+            transform: translateY(-50%);
+
+}
+
+.single form .control a,
+
+.single form .control a:hover,
+
+.single form .control a:active,
+
+.single form .control a:visited,
+
+.single form .control a:focus {
+
+    color: inherit;
+
+}
+
+.single form .submit {
+
+    padding: 8px 10px;
+
+    width: 100%;
+
+    height: 36px;
+
+    line-height: 18px;
+
+}
+
+/*************************************************
+
+********************* login *********************
+
+*************************************************/
+
+/*.login-pre {
+
+    background-image: url('http://wxsc.wei-mei.com/weimei/Public/images/single_cover_sp.jpg');
+
+}*/
+
+.login-pre .logo {
+
+    margin-bottom: 40px;
+
+}
+
+@media screen and (min-width: 340px) {
+
+    .login-pre .logo {
+
+        margin-bottom: 50px;
+
+    }
+
+}
+
+@media screen and (min-width: 350px) {
+
+    .login-pre .logo {
+
+        margin-bottom: 60px;
+
+    }
+
+}
+
+@media screen and (min-width: 370px) {
+
+    .login-pre .logo {
+
+        margin-bottom: 80px;
+
+    }
+
+}
+
+@media screen and (min-width: 400px) {
+
+    .login-pre .logo {
+
+        margin-bottom: 100px;
+
+    }
+
+}
+
+
+
+/*************************************************
+
+******************** registe ********************
+
+*************************************************/
+
+/*.registe {
+
+    background-image: url('http://wxsc.wei-mei.com/weimei/Public/images/single_cover_another.jpg');
+
+}*/
+
+@media screen and (min-width: 340px) {
+
+    .registe .logo {
+
+        margin-bottom: 40px;
+
+    }
+
+}
+
+@media screen and (min-width: 350px) {
+
+    .registe .logo {
+
+        margin-bottom: 50px;
+
+    }
+
+}
+
+@media screen and (min-width: 370px) {
+
+    .registe .logo {
+
+        margin-bottom: 60px;
+
+    }
+
+}
+
+@media screen and (min-width: 400px) {
+
+    .registe .logo {
+
+        margin-bottom: 70px;
+
+    }
+
+}
+
+.registe .member {
+
+    margin-bottom: 16px;
+
+    padding: 0 12px;
+
+}
+
+.registe .member span {
+
+    float: left;
+
+    position: relative;
+
+    top: 1px;
+
+    font-size: 1.2rem;
+
+}
+
+.registe .member .member-wrap {
+
+    float: right;
+
+}
+
+.registe .member .member-control {
+
+    float: left;
+
+    position: relative;
+
+    margin-left: 12px;
+
+}
+
+.registe .member .member-control:first-child {
+
+    margin-left: 0;
+
+}
+
+.registe .member .member-control input,
+
+.registe .member .member-control .iradio_flat  {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 0;
+
+    margin-top: -6px;
+
+    width: 12px;
+
+    height: 12px;
+
+    background: url('http://wxsc.wei-mei.com/weimei/Public/images/radio.png') no-repeat 0 0;
+
+    background-size: auto 12px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+}
+
+/* .registe .member .member-control .iradio_flat:hover,
+
+.registe .member .member-control .iradio_flat.hover,*/
+
+.registe .member .member-control .iradio_flat.checked {
+
+    background-position: 100% 0;
+
+}
+
+.registe .member .member-control lable {
+
+    padding-left: 16px;
+
+    line-height: 1em;
+
+}
+
+
+
+/*************************************************
+
+******************** registe ********************
+
+*************************************************/
+
+.signin #content .content {
+
+    position: relative;
+
+    text-align: center;
+
+}
+
+.signin .today {
+
+    margin-bottom: 16px;
+
+}
+
+.signin .today-text {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #666;
+
+    font-size: 1.8rem;
+
+}
+
+.signin .today-date {
+
+    display: block;
+
+    color: #7e2e8d;
+
+    font-size: 1.2rem;
+
+}
+
+.signin #signin {
+
+    position: relative;
+
+    display: block;
+
+    margin: 0 auto;
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 100%;
+
+}
+
+.signin #signin .circle {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color: #7e2e8d;
+
+    border-radius: 100%;
+
+}
+
+.signin #signin .context {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    border-radius: 100%;
+
+}
+
+.signin #signin .context .img {
+
+    position: absolute;
+
+    top: 30%;
+
+    left: 30%;
+
+    width: 40%;
+
+    height: 40%;
+
+    border-radius: 100%;
+
+}
+
+.signin #signin .context .img img {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: auto;
+
+    height: 100%;
+
+}
+
+.signin #signin .context .desc {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 18%;
+
+    width: 100%;
+
+    color: #fff;
+
+    font-size: 1.2rem;
+
+    letter-spacing: 2px;
+
+    -webkit-transform: translateY(50%);
+
+    transform: translateY(50%);
+
+}
+
+.signin .done {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 0;
+
+    padding-top: 18px;
+
+    opacity: 0;
+
+    visibility: visible;
+
+    pointer-events: none;
+
+    -webkit-transform: translateX(-50%);
+
+    transform: translateX(-50%);
+
+}
+
+.signin-succeed .done {
+
+    position: relative;
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+.signin .done .tips-title {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #56afba;
+
+    font-size: 2.5rem;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+
+}
+
+.signin .done .tips-content {
+
+    display: block;
+
+    color: #666;
+
+    font-size: 1.35rem;
+
+    letter-spacing: 1px;
+
+    white-space: nowrap;
+
+}
+
+.signin .done .tips-content em {
+
+    color: #56afba;
+
+}
+
+.signin .done .coin {
+
+    margin: 0 auto;
+
+    margin-top: 15px;
+
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 100%;
+
+    border: 2px solid #666;
+
+}
+
+.signin .done .coin .coin-text {
+
+    display: block;
+
+    margin-top: 4px;
+
+    margin-bottom: 6px;
+
+    color: #666;
+
+    font-size: 1.22rem;
+
+}
+
+.signin .done .coin .coin-qty {
+
+    display: block;
+
+    color: #56afba;
+
+    font-size: 2.8rem;
+
+}
+
+@media screen and (min-width: 340px) {
+
+}
+
+@media screen and (min-width: 350px) {
+
+    .signin #signin {
+
+        width: 168px;
+
+        height: 168px;
+
+    }
+
+    .signin .done {
+
+        padding-top: 24px;
+
+    }
+
+    .signin .done .coin {
+
+        margin-top: 15px;
+
+        width: 84px;
+
+        height: 84px;
+
+    }
+
+}
+
+@media screen and (min-width: 370px) {
+
+}
+
+@media screen and (min-width: 400px) {
+
+    .signin #signin {
+
+        width: 190px;
+
+        height: 190px;
+
+    }
+
+    .signin .done {
+
+        padding-top: 40px;
+
+    }
+
+    .signin .done .coin {
+
+        margin-top: 30px;
+
+        width: 90px;
+
+        height: 90px;
+
+    }
+
+}
+
+.location .content {
+
+    height: 100%;
+
+    overflow: hidden;
+
+}
+
+
+
+
+
+/*************************************************
+
+****************** form verify ******************
+
+*************************************************/
+
+.empty,
+
+.error,
+
+.different {
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 100%;
+
+    margin-bottom: 4px;
+
+    padding: 4px 10px;
+
+    border-radius: 4px;
+
+    color: #fff;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    -webkit-transition: all .3s ease;
+
+    transition: all .3s ease;
+
+    -webkit-filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.4));
+
+    filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.4));
+
+}
+
+.empty.has,
+
+.error.has,
+
+.different.has {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+.empty:before,
+
+.error:before,
+
+.different:before {
+
+    position: absolute;
+
+    z-index: -1;
+
+    left: 16px;
+
+    top: 100%;
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 2px;
+
+    content: '';
+
+    -webkit-transform: translateY(-55%) rotate(45deg);
+
+            transform: translateY(-55%) rotate(45deg);
+
+}
+
+.empty,
+
+.empty:before {
+
+    background-color: #e46178;
+
+}
+
+.error,
+
+.error:before {
+
+    background-color: #d4425a;
+
+}
+
+.different,
+
+.different:before {
+
+    background-color: #d4425a;
+
+}
+
+.reservation.home .empty,
+
+.reservation.home .error {
+
+    left: 10px;
+
+    margin-bottom: -4px;
+
+    padding: 6px 10px;
+
+}
+
+.reservation.hospital .empty,
+
+.reservation.hospital .error {
+
+    left: 8px;
+
+    margin-bottom: -6px;
+
+    padding: 6px 10px;
+
+}
+
+.single form .control .empty,
+
+.single form .control .error,
+
+.single form .control .different {
+
+    left: 34px;
+
+    margin-bottom: 1px;
+
+}
+
+.address-add .empty,
+
+.address-add .error {
+
+    left: 10px;
+
+    padding: 6px 10px;
+
+}
+
+.modify-name .empty,
+
+.modify-name .error {
+
+    left: 48px;
+
+    padding: 6px 10px;
+
+}
+
+.modify-mobile .empty,
+
+.modify-mobile .error {
+
+    left: 60px;
+
+    padding: 6px 10px;
+
+}
+
+
+
+
+
+/*************************************************
+
+****************** form verify ******************
+
+*************************************************/
+
+.activity section {
+
+    padding: .5rem 0;
+
+    border-radius: 10px;
+
+    background-color: #fff;
+
+}
+
+.activity .wrap {
+
+    position: relative;
+
+    padding: 1rem 20px;
+
+    font-size: 0;
+
+    border-top: 1px solid #eee;
+
+    background-color: transparent;
+
+}
+
+.activity .wrap:first-child {
+
+    border: none;
+
+}
+
+.activity .wrap label {
+
+    padding: 0 .5rem;
+
+    line-height: 24px;
+
+    font-size: 1.25rem;
+
+    color: #666;
+
+    vertical-align: middle;
+
+}
+
+.activity .wrap .input-content {
+
+    display: inline-block;
+
+    font-size: 0;
+
+}
+
+.activity .wrap input {
+
+    padding: 0;
+
+    width: 100%;
+
+    line-height: 24px;
+
+    font-size: 1.25rem;
+
+    color: #7e2e8d;
+
+    border: none;
+
+    box-shadow: none;
+
+    background-color: transparent;
+
+}
+
+
+
+/*************************************************
+
+****************** form verify ******************
+
+*************************************************/
+
+.modify-container {
+
+    padding: 32px 24px;
+
+    line-height: 1;
+
+    padding-bottom: 16px;
+
+    border-radius: 10px;
+
+}
+
+.modify-container .layermcont {
+
+    padding: 0;
+
+}
+
+.modify-container .context {
+
+    font-size: 14px;
+
+    box-sizing:border-box;
+
+    -moz-box-sizing:border-box;
+
+    -webkit-box-sizing:border-box;
+
+}
+
+.modify-container .context .input-wrap {
+
+    position: relative;
+
+}
+
+.modify-container .context label,
+
+.modify-container .context a {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 14px;
+
+    -webkit-transform: translateY(-50%);
+
+    transform: translateY(-50%);
+
+}
+
+.modify-container .context .input-wrap {
+
+    position: relative;
+
+}
+
+.modify-container .context label {
+
+    line-height: 1.42857143;
+
+}
+
+.modify-container .context a {
+
+    left: auto;
+
+    right: 4px;
+
+    padding: 1px 4px;
+
+    font-size: 12px;
+
+    border-radius: 4px;
+
+    background-color: #e8e8e8;
+
+}
+
+.modify-container .context .close {
+
+    top: 10px;
+
+    left: auto;
+
+    right: 10px;
+
+    padding: 1px 7px;
+
+    font-size: 12px;
+
+    border-radius: 4px;
+
+    background-color: #e8e8e8;
+
+    -webkit-transform: translateY(0);
+
+    transform: translateY(0);
+
+}
+
+.modify-container .context .input-wrap {
+
+    margin-top: 24px;
+
+    min-width: 240px;
+
+}
+
+.modify-container .context .input-wrap:first-child {
+
+    margin-top: 0;
+
+}
+
+.modify-container .context .input-control input {
+
+    padding: 10px 16px;
+
+    width: 100%;
+
+    font-size: 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+}
+
+.modify-name .context .name input {
+
+    padding-left: 56px;
+
+}
+
+.modify-mobile .context .mobile input {
+
+    padding-left: 80px;
+
+}
+
+.modify-mobile .context .snscode input {
+
+    padding-left: 66px;
+
+}
+
+.modify-container .layermbtn {
+
+    padding-top: 20px;
+
+    padding-bottom: 12px;
+
+    height: auto;
+
+    line-height: 1;
+
+    text-align: center;
+
+    border: none;
+
+    background-color: transparent;
+
+}
+
+.modify-container .layermbtn span {
+
+    padding: 12px 14px;
+
+    height: auto;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background-color: #7e2e8d;
+
+}
+
+.modify-container .layermbtn:before {
+
+    width: 0;
+
+    height: 0;
+
+    content: '';
+
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html class="gray">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="MobileOptimized" content="320">
+    <title>维美美丽管家</title>
+    <script type="text/javascript" src="js/layer/layer.js"></script>
+    <link rel="stylesheet" type="text/css" href="__CSS__/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/common.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/custom.css">
+</head>
+
+<body>
+<header>
+    <nav>
+        <a id="location" href="{:U('Mei/ditu')}"><img src="__STYLE__/images/location.png"></a>
+        <a class="title">维美币</a>
+        <a id="tel" href="tel:{$tel[0]['phone']}"><img src="__STYLE__/images/tel.png"></a>
+    </nav>
+</header>
+<div id="content" class="balance">
+    <div class="content">
+        <script type="text/javascript">__CELL__ = 3; /* #swiper-nav 一行显示的元素个数 */</script>
+        <div id="swiper-nav" class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide active-nav">可用</div>
+                <div class="swiper-slide">已用</div>
+                <div class="swiper-slide">已过期</div>
+            </div>
+        </div>
+        <div id="swiper-container" class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <section class="context">
+                    <foreach name="hao" item="value" key="key">
+                        <div class="coins-info">
+                            <span class="coins">{++$key}</span>
+                            <div class="info">
+                                <div class="con-l">
+                                    <span class="con-t"><span>获取途径：</span><em>
+                                    <if condition="$value['coinrule_id'] neq null ">
+                                        <if condition="$value['type'] neq 0">充值
+                                            <else /> 签到
+                                        </if>
+                                    </if>
+                                    <if condition="$value['coinactivity_id'] neq null ">活动</if></em></span>
+                                    <i></i>
+                                    <span class="con-b"><span>获取日期：</span><em><php>echo date("Y-m-d",$value['max(time)']);</php></em></span>
+                                </div>
+                                <div class="con-r">
+                                    <span class="con-t"><span>数量：</span><em>{$value['sum(nouse)']}</em></span>
+                                    <i></i>
+                                    <span class="con-b"><span>有效日期：</span><em><php>echo date("Y-m-d",$value['timeto']);</php></em></span>
+                                </div>
+                            </div>
+                        </div>
+                    </foreach>
+                    </section>
+                </div>
+                <div class="swiper-slide">
+                    <section class="context">
+                    <foreach name="yong" item="value" key="key">
+                        <div class="coins-info">
+                            <span class="coins">{++$key}</span>
+                            <div class="info">
+                                <div class="con-l">
+                                    <span class="con-t"><span>获取途径：</span><em>
+                                    <if condition="$value['coinrule_id'] neq null ">
+                                        <if condition="$value['type'] neq 0">充值
+                                            <else /> 签到
+                                        </if>
+                                    </if>
+                                    <if condition="$value['coinactivity_id'] neq null ">活动</if></em></span>
+                                    <i></i>
+                                    <span class="con-b"><span>获取日期：</span><em><php>echo date("Y-m-d",$value['time']);</php></em></span>
+                                </div>
+                                <div class="con-r">
+                                    <span class="con-t"><span>数量：</span><em>{$value['sum(usee)']}</em></span>
+                                    <i></i>
+                                    <span class="con-b"><span>使用日期：</span><em><php>echo date("Y-m-d",$value['max(usetime)']);</php></em></span>
+                                </div>
+                            </div>
+                        </div>
+                    </foreach>
+                    </section>
+                </div>
+                <div class="swiper-slide">
+                    <section class="context">
+                    <foreach name="ci" item="value" key="key">
+                        <div class="coins-info">
+                            <span class="coins">{++$key}</span>
+                            <div class="info">
+                                <div class="con-l">
+                                    <span class="con-t"><span>获取途径：</span><em>
+                                    <if condition="$value['coinrule_id'] neq null ">
+                                        <if condition="$value['type'] neq 0">充值
+                                            <else /> 签到
+                                        </if>
+                                    </if>
+                                    <if condition="$value['coinactivity_id'] neq null ">活动</if></em></span>
+                                    <i></i>
+                                    <span class="con-b"><span>获取日期：</span><em><php>echo date("Y-m-d",$value['time']);</php></em></span>
+                                </div>
+                                <div class="con-r">
+                                    <span class="con-t"><span>数量：</span><em>{$value['sum(nouse)']}</em></span>
+                                    <i></i>
+                                    <span class="con-b"><span>有效日期：</span><em><php>echo date("Y-m-d",$value['timeto']);</php></em></span>
+                                </div>
+                            </div>
+                        </div>
+                    </foreach>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <ul class="clearfix">
+        <li class="center">
+            <a href="{:U('Mei/mei_index')}">
+                <div class="ico">
+                    <img src="__STYLE__/images/home.png">
+                </div>
+                <span>首页</span>
+            </a>
+        </li>
+        <li class="center">
+            <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx07c0189227f8f9af&redirect_uri=__URL__/weimei/index.php/Home/Dingdan/order&response_type=code&scope=snsapi_base&state=123#wechat_redirect">
+                <div class="ico">
+                    <img src="__STYLE__/images/order.png">
+                </div>
+                <span>订单</span>
+            </a>
+        </li>
+        <li class="center">
+            <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx07c0189227f8f9af&redirect_uri=__URL__/weimei/index.php/Home/Mei/keeper&response_type=code&scope=snsapi_base&state=123#wechat_redirect">
+                <div class="ico">
+                    <img src="__STYLE__/images/user.png">
+                </div>
+                <span>我的</span>
+            </a>
+        </li>
+    </ul>
+</footer>
+
+<script type="text/javascript" src="__JS__/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="__JS__/swiper.min.js"></script>
+<script type="text/javascript" src="__JS__/custom.js"></script>
+
+</body>
+</html>

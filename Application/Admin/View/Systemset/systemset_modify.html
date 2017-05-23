@@ -1,0 +1,61 @@
+<extend name="Public:base" />
+<block name="main-header">
+	<div class="header">
+        <h1 class="page-title">系统设置</h1>
+        <ul class="breadcrumb">
+            <li>系统设置</li> 
+            <li class="active">系统设置</li>          
+        </ul>
+    </div>
+</block>
+
+<block name="main-content">
+	<div class="main-content" style="height: 1350px;">
+        <form enctype="multipart/form-data" action="{:U('systemset_modify_update',array('sid'=>$systemset[0]['id']))}" method="post" class="demoform" >
+           <div class="form-group">
+				<label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">联系电话: <span style="color:red">*</span></label>
+				<div class="col-md-6" style="padding:0px 0px 10px 0px;">
+					<input type="text" class="form-control" name="txtphone" id="txtphone" value="{$systemset[0]['phone']}" datatype="*" nullmsg="请填写联系电话！" errormsg="请填写联系电话！">
+				</div>
+			</div>
+			 <div class="form-group">
+				<label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">预约提前: <span style="color:red">*</span></label>
+				<div class="col-md-5" style="padding:0px 0px 10px 0px;">
+					<input type="text" class="form-control" name="txthourok" id="txthourok" value="{$systemset[0]['hourok']}" datatype="n" nullmsg="请填写预约提前时间！" errormsg="预约提前时间只能为数字" >
+				</div>
+				<div class="col-md-1" style="line-height: 35px; text-align: center;color: #555;" >小时</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">取消提前:<span style="color:red">*</span></label>
+				<div class="col-md-5" style="padding:0px 0px 10px 0px;">
+					<input type="text" class="form-control" name="txthourcancle" id="txthourcancle" placeholder="必填项" value="{$systemset[0]['hourcancle']}" datatype="n" nullmsg="请填写预约取消提前时间！" errormsg="预约取消提前时间只能为数字"  >
+				</div>
+				<div class="col-md-1" style="line-height: 35px; text-align: center; color: #555;" >小时</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-12 control-label" style="padding:0px 0px 5px 0px;">服务时间<span style="color:red">*</span></label>
+				<div class="col-md-6" style="padding:0px 0px 10px 0px;">
+				<div class="col-md-5" style=" padding: 0px;">
+					<input type="text" class="form-control" name="txttimef" id="txttimef" placeholder="必填项" value="{$systemset[0]['timefrom']}" datatype="*" nullmsg="请填写服务开始时间！" errormsg="请填写服务开始时间！">
+					</div>
+					<div class="col-md-1" style="line-height: 35px; text-align: center;">至</div>
+					<div class="col-md-5" style=" padding: 0px;"><input type="text" class="form-control" name="txttimet" id="txttimet" placeholder="必填项" value="{$systemset[0]['timeto']}" datatype="*" nullmsg="请填写服务结束时间！" errormsg="请填写服务结束时间！">
+					</div>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<div class="btn-toolbar list-toolbar col-md-offset-2 col-md-10" style="margin-top:15px;margin-bottom:40px;">
+				<button type="submit" class="btn btn-primary" style="width: 40%;"><i class="fa fa-save"></i> 保 存</button>
+			
+				</div>
+			</div>
+
+        </form>
+	</div>
+	<script type="text/javascript">
+		 $(".demoform").Validform();
+	</script>
+
+	
+</block>

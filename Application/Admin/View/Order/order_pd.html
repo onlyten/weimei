@@ -1,0 +1,56 @@
+<extend name="Public:base" />
+
+
+
+
+<block name="main-header">
+	<div class="header">
+        <h1 class="page-title">派单</h1>
+        <ul class="breadcrumb">
+            <li>派单</li> 
+            <li class="active">派单至美丽管家</li>          
+        </ul>
+    </div>
+</block>
+
+<block name="main-content">
+  
+  <form enctype="multipart/form-data" action="{:U('order_pd_update')}" method="post" >
+     <div class="btn-toolbar list-toolbar col-md-12">
+        <button class="btn btn-danger" id="btn_search" type="submit" style="width:15%;float:left;"><i class="glyphicon glyphicon-search"></i> 派单</button>
+     </div>
+        <h3 class="page-tagline"></h3>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-striped">
+            <thead>
+              <tr style="background: #0099FF;color:#FFFFFF">
+                <th>序号</th>
+                <th>姓名</th>
+                <th>工号</th>
+              </tr>
+            </thead>
+            <tbody>
+            <?php
+                for($i=0;$i<count($housekeeper);$i++)
+                {
+            ?>
+                  <tr>
+                  <td> <input type="checkbox" name="delete_id[]" value="<?php echo $housekeeper[$i]['id'];?>"　"<?php if($housekeeper[$i]['ispd']==1){ ?>" checked="checked"  "<?php } ?>"
+                  ></td>
+                  <td><?php echo $housekeeper[$i]['name'];  ?></td>
+                  <td><?php echo $housekeeper[$i]['job_num'];  ?></td>
+                  <td><?php echo $housekeeper[$i]['name3'];  ?></td>
+                 </tr>
+            <?php
+                }
+            ?>
+            </tbody>
+          </table>
+          <input type="hidden" name="orderid" id="orderid" value="{$orderid}"  />
+        </div>
+      </div>
+    </form>
+
+	
+</block>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="MobileOptimized" content="320">
+
+    <title>维美美丽管家</title>
+
+    <link rel="stylesheet" type="text/css" href="__CSS__/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/common.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/custom.css">
+</head>
+
+<body>
+<header>
+    <nav>
+        <a id="location" href="{:U('Mei/ditu')}"><img src="__STYLE__/images/location.png"></a>
+        <a class="title">维美美丽管家</a>
+        <a id="tel" href="tel:{$tel[0]['phone']}"><img src="__STYLE__/images/tel.png"></a>
+    </nav>
+</header>
+
+<div id="content">
+    <div class="content">
+        <div class="index-con">
+            <div class="index-banner">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="__STYLE__/images/banner1.png"></div>
+                        <div class="swiper-slide"><img src="__STYLE__/images/banner1.png"></div>
+                        <div class="swiper-slide"><img src="__STYLE__/images/banner1.png"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="menu-con">
+                <ul>
+                <foreach name="server" item="value" key="key" >
+                    <if condition="$value['server_name'] neq '美丽管家'">
+                        <li>
+                            <a class="pic-bg" href="{:U('Mei/facecare',array('server_id'=>$value['id']))}">
+                                <img src="__STYLE__/images/border_bg.png" class="borbg">
+                                <div class="case"><img src="__STYLE__/upload/img/{$value['server_img']}" ></div>
+                            </a>
+                        </li>
+                    </if>
+                    <if condition="$value['server_name'] eq '美丽管家'">
+                        <li>
+                            <a class="pic-bg" href="{:U('Mei/housekeeper',array('server_id'=>$value['id']))}">
+                                <img src="__STYLE__/images/border_bg.png" class="borbg">
+                                <div class="case"><img src="__STYLE__/upload/img/{$value['server_img']}" ></div>
+                            </a>
+                        </li>
+                    </if>
+                </foreach>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+         </div>
+    </div>
+</div>
+
+<footer>
+    <ul class="clearfix">
+        <li class="center">
+            <a href="{:U('Mei/mei_index')}">
+                <div class="ico">
+                    <img src="__STYLE__/images/home.png">
+                </div>
+                <span>首页</span>
+            </a>
+        </li>
+        <li class="center">
+            <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx07c0189227f8f9af&redirect_uri=__URL__/weimei/index.php/Home/Dingdan/order&response_type=code&scope=snsapi_base&state=123#wechat_redirect">
+                <div class="ico">
+                    <img src="__STYLE__/images/order.png">
+                </div>
+                <span>订单</span>
+            </a>
+        </li>
+        <li class="center">
+            <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx07c0189227f8f9af&redirect_uri=__URL__/weimei/index.php/Home/Mei/keeper&response_type=code&scope=snsapi_base&state=123#wechat_redirect">
+                <div class="ico">
+                    <img src="__STYLE__/images/user.png">
+                </div>
+                <span>我的</span>
+            </a>
+        </li>
+    </ul>
+</footer>
+
+<script type="text/javascript" src="__JS__/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="__JS__/swiper.min.js"></script>
+<script type="text/javascript" src="__JS__/custom.js"></script>
+<script type="text/javascript">
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    autoplay:5000
+});
+</script>
+
+</body>
+</html>

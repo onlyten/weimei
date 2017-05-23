@@ -1,0 +1,96 @@
+<extend name="Public:base" />
+<!-- 需要继承的不用写，不需要继承（去掉的）要写，并且里面为空 -->
+<block name="main-header">
+	<div class="header">
+        <h1 class="page-title">服务类型管理</h1>
+        <ul class="breadcrumb">
+            <li>服务类型管理</li>
+            <li class="active">服务类型管理</li>
+        </ul>
+    </div>
+</block>
+<block name="main-content">
+	<div class="main-content">
+		<form enctype="multipart/form-data" action="{:U('server_delete_update')}" method="post" >
+			<div class="btn-toolbar list-toolbar col-md-12" style="margin-top: -20px;">　　　　　　　　　　　　　　　　　　　
+			    <div class='col-md-2'> <a href="{:U('server_add')}" class="btn btn-primary"><i class="fa fa-plus"></i> 添加服务类型</a></div>
+			    <div class='col-md-2'><button type="submit" class="btn btn-danger" name="del" ><i class="glyphicon glyphicon-trash"></i> 删除服务类型</button></div>
+			</div>
+			<!-- <h1 class="page">Premium User List</h1> -->
+			<h3 class="page-tagline"></h3>
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table table-striped">
+						<thead>
+							<tr style="background: #0099FF;color:#FFFFFF">
+								<th>序号</th>
+								<th>类型名</th>
+								<th>服务类型</th>
+								<th>服务标识</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<volist name='server' id='vo'>
+							<tr>
+								<td> <input type="checkbox" name="delete_id[]" value="{$vo['id']}">&nbsp;&nbsp;{$vo['id']}</td>
+								<td>{$vo['server_name']}</td>
+								<td>
+									<if condition="$vo['server_type'] eq 1 ">美容项目
+									    <else /> 美丽管家
+									</if>
+								</td>
+								<td><img class="media-object thumb-sm" src="__PICURL__/{$vo['server_img']}"></td>
+								<td>
+									<a href="{:U('server_modify',array('server_id'=>$vo['id']))}">编辑</a>
+								</td>
+							</tr>
+							</volist>
+						</tbody>
+					</table>
+					
+				</div>
+			</div>
+		</form>
+		<input type="text" value="all" id="page_condition" style="display:none;" />
+		<input type="text" value="" id="order_condition"  style="display:none;" />
+		<div class="result page" id='footer_div' style="text-align:center"><font id='wc'>共 {$server_count} 条记录  {$page_now}/{$server_pagenum} 页 </font>  <a class="pre_page" href="#">上一页</a>  <a class="next_page" href="#">下一页</a>  跳至<input style="width:25px;" class="jump_page" type="text"/> 页 &nbsp; <input type="button" class="btn btn-primary btn-sm jump_button" value="提交">  </div>
+	
+	</div>
+	<!-- 模板继承，js函数写到block里 -->
+	<script type="text/javascript">
+		$('.next_page').on('click', function() {
+			order_condition = $('#order_condition').val();
+			page_condition = $('#page_condition').val();
+			if ({$page_now} == {$server_pagenum}) {
+				alert('当前页为最后一页');
+			}else{
+				location.href = "{:U('server_list',array('page_now'=>$page_now+1))}";
+			};
+		});
+
+		$('.pre_page').on('click', function() {
+			order_condition = $('#order_condition').val();
+			page_condition = $('#page_condition').val();
+			if ({$page_now} == 1) {
+				alert('当前页为第一页');
+			}else{
+				location.href = "{:U('server_list',array('page_now'=>$page_now-1))}";
+			};
+		});
+
+		$('.jump_button').on('click', function() {
+			order_condition = $('#order_condition').val();
+			page_condition = $('#page_condition').val();
+			if ( parseInt($('.jump_page').val()) < 1 || parseInt($('.jump_page').val()) > {$server_pagenum} ) {
+				alert('超过页数范围');
+			}else{
+				location.href = "{:U('server_list')}/page_now/"+$('.jump_page').val();
+			};
+		});
+	</script>
+</block>
+
+
+		
+		

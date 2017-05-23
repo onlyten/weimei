@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html class="gray">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="MobileOptimized" content="320">
+    <title>维美美丽管家</title>
+    <script type="text/javascript" src="__JS__/layer.js"></script>
+    <link rel="stylesheet" type="text/css" href="__CSS__/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/common.css">
+    <link rel="stylesheet" type="text/css" href="__CSS__/custom.css">
+</head>
+
+<body>
+<header>
+    <nav>
+        <a id="location" href="{:U('Mei/ditu')}"><img src="__STYLE__/images/location.png"></a>
+        <a class="title">订单进行中</a>
+        <a id="tel" href="tel:{$tel[0]['phone']}"><img src="__STYLE__/images/tel.png"></a>
+        <input class="" type="hidden" name="hourok" id="hourok" value="{$tel[0]['hourok']}">
+    </nav>
+</header>
+
+<div id="content" class="order-con">
+    <div class="content">
+        <script type="text/javascript">__CELL__ = 2; /* #swiper-nav 一行显示的元素个数 */</script>
+        <div id="swiper-nav" class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide active-nav">单次进行中</div>
+                <div class="swiper-slide">疗程进行中</div>
+            </div>
+        </div>
+        <div id="swiper-container" class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                <foreach name="dingdan" item="value" key="key">
+                    <div class="per-ordering">
+                        <h5>订单号</h5>
+                        <h3>{$value['order_id']}</h3>
+                        <a href="__URL__/weimei/index.php/Home/Mei/facecare_detail/mei_id/{$value[mei_id]}">购买项目详情：点击进入详情</a>
+                        <a>美丽管家联系方式：{$tel[0]['phone']}</a>
+                        <ul class="button-top clearfix">
+                            <li><a data-service="{$value['order_id']}" data-time="{$value['time']}">更改时间</a></li>
+                            <li><a href="{:U('dingdan_cancle',array('order_id' => $value['order_id']))}" onClick="delcf()">取消订单</a></li>
+                        </ul>
+                        <div class="button-bot">
+                            <a href="{:U('dingdan_over',array('order_id' => $value['order_id']))}" onClick="delc()">确认服务完成</a>
+                        </div>
+                    </div>
+                </foreach>
+                </div>
+                <div class="swiper-slide">
+                 <foreach name="dingmore" item="value" key="key">
+                    <div class="per-ordering">
+                        <h5>订单号</h5>
+                        <h3>{$value['order_id']}</h3>
+                        <a>已服务次数/总次数：
+                            <if condition="$tongji[$value['order_id']] neq null">{$tongji[$value['order_id']]}
+                                <else/>0
+                            </if>/{$value['cishu']}
+                        </a>
+                        <a href="__URL__/weimei/index.php/Home/Mei/facecare_detail/mei_id/{$value[mei_id]}">购买项目详情：点击进入详情</a>
+                        <a>美丽管家联系方式：{$tel[0]['phone']}</a>
+                       <ul class="period clearfix">
+                            <li><a da-service="{$value['order_id']}" da-time="{$value['time']}">预约下一次服务</a></li>
+                            <li><a href="{:U('dingmore_one_cancle',array('order_id' => $value['order_id']))}" onClick="delcfm()">取消服务</a></li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            <li><a href="{:U('dingmore_cancle',array('order_id' => $value['order_id']))}" onClick="delcf()">取消订单</a></li>
+                            <li><a href="{:U('dingdan_over',array('order_id' => $value['order_id']))}" onClick="delc()">确认订单完成</a></li>
+                        </ul>
+                    </div>
+                </foreach>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <ul class="clearfix">
+        <li class="center">
+                <a href="{:U('Mei/mei_index')}">
+                    <div class="ico">
+                        <img src="__STYLE__/images/home.png">
+                    </div>
+                    <span>首页</span>
+                </a>
+        </li>
+        <li class="center">
+            <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx07c0189227f8f9af&redirect_uri=__URL__/weimei/index.php/Home/Dingdan/order&response_type=code&scope=snsapi_base&state=123#wechat_redirect">
+                <div class="ico">
+                    <img src="__STYLE__/images/order.png">
+                </div>
+                <span>订单</span>
+            </a>
+        </li>
+        <li class="center">
+            <a href="https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx07c0189227f8f9af&redirect_uri=__URL__/weimei/index.php/Home/Mei/keeper&response_type=code&scope=snsapi_base&state=123#wechat_redirect">
+                <div class="ico">
+                    <img src="__STYLE__/images/user.png">
+                </div>
+                <span>我的</span>
+            </a>
+        </li>
+    </ul>
+</footer>
+
+<script type="text/javascript" src="__JS__/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="__JS__/swiper.min.js"></script>
+<script type="text/javascript" src="__JS__/custom.js"></script>
+<script type="text/javascript">
+// 提前预约的时间，单位“小时”
+appointmentTimeHour = document.getElementById("hourok").value;
+appointmentDateTime = '';
+
+// 可提供的预约时间段
+TIME = ['10:00','10:30','11:00','11:30','12:00','12:30','13:00','13:30','14:00','14:30','15:00','15:30','16:00','16:30','17:00','17:30','18:00','18:30','19:00','19:30','20:00'];
+
+$(function(){
+    $('a[data-time]').on('click', function(){
+        var $this = $(this),
+            serviceIndex = $this.parentsUntil('.per-ordering').parent().index();
+
+        appointmentDateTime = $this.attr('data-time');
+
+        layer.open({
+            className: 'time-wrapper',
+            content: getAppointmentDateTime($this.attr('data-time')),
+            btn: ['确定', '取消'],
+            // shadeClose: false,
+            success: function(elem){
+                $(elem).find('li').on('click', function(){
+                    var $this = $(this);
+
+                    $this.siblings().removeClass('active');
+                    $this.addClass('active');
+                });
+                timeLimit($('#day').attr('data-day') + ' ' + TIME[0])
+            },
+            yes: function(){
+                var $o = $('.time-wrapper').find('li.active');
+                // console.log($o);
+                if ($o.length > 0) {
+                    appointmentDateTime = $('#day').attr('data-day') + ' ' + $o.text();
+                    $this.attr('data-time', appointmentDateTime);
+                }
+
+                layer.closeAll();
+
+                layer.open({
+                    type: 2,
+                    shadeClose: false
+                });
+
+                $.post(
+                    "{:U('modify_time')}",
+                    {order_id: $this.attr('data-service'), time: appointmentDateTime},
+                    function(data){
+                        if (data.error) {
+                            layer.closeAll();
+                            layer.open({content: '更改失败', time: 1});
+                        } else {
+                            layer.closeAll();
+                            layer.open({content: '更改成功', time: 1});
+                        }
+                    },
+                'json');
+
+            }, no: function(){
+                layer.open({content: '取消更改', time: 1});
+            }
+        });
+    });
+
+
+
+    $('a[da-time]').on('click', function(){
+        var $this = $(this),
+            serviceIndex = $this.parentsUntil('.per-ordering').parent().index();
+
+        appointmentDateTime = $this.attr('da-time');
+
+        layer.open({
+            className: 'time-wrapper',
+            content: getAppointmentDateTime($this.attr('da-time')),
+            btn: ['确定', '取消'],
+            // shadeClose: false,
+            success: function(elem){
+                $(elem).find('li').on('click', function(){
+                    var $this = $(this);
+
+                    $this.siblings().removeClass('active');
+                    $this.addClass('active');
+                });
+                timeLimit($('#day').attr('data-day') + ' ' + TIME[0])
+            },
+            yes: function(){
+                var $o = $('.time-wrapper').find('li.active');
+                // console.log($o);
+                if ($o.length > 0) {
+                    appointmentDateTime = $('#day').attr('data-day') + ' ' + $o.text();
+                    $this.attr('da-time', appointmentDateTime);
+                }
+
+                layer.closeAll();
+
+                layer.open({
+                    type: 2,
+                    shadeClose: false
+                });
+
+                $.post(
+                    "{:U('dingmore_one_again')}",
+                    {order_id: $this.attr('da-service'), time: appointmentDateTime},
+                    function(data){
+                            layer.closeAll();
+                            layer.open({content: data, time: 1});
+                    },
+                'json');
+
+            }, no: function(){
+                layer.open({content: '取消更改', time: 3});
+            }
+        });
+    });
+
+
+
+    $('a[data-cancel-order]').on('click', function(){
+        var $this = $(this),
+            order = $this.attr('data-cancel-order');
+
+        layer.open({
+            type: 2,
+            shadeClose: false
+        });
+
+        // layer.closeAll()
+    });
+    $('a[data-done]').on('click', function(){
+        var $this = $(this),
+            order = $this.attr('data-done');
+
+        layer.open({
+            type: 2,
+            shadeClose: false
+        });
+
+        // layer.closeAll()
+    });
+    $('a[data-cancel-service]').on('click', function(){
+        var $this = $(this),
+            order = $this.attr('data-cancel-service');
+
+        layer.open({
+            type: 2,
+            shadeClose: false
+        });
+
+        // layer.closeAll()
+    });
+});
+</script>
+<script language="javascript">
+    function delcfm() {
+        if (!confirm("您确定取消本次服务吗？取消后需再次预约时间")) {
+            window.event.returnValue = false;
+        }
+    }
+</script>
+<script language="javascript">
+    function delcf() {
+        if (!confirm("您确定取消本订单吗？取消后需到院领取退款")) {
+            window.event.returnValue = false;
+        }
+    }
+</script>
+<script language="javascript">
+    function delc() {
+        if (!confirm("您确定本订单服务已全部完成了吗？点击确认后将完成此订单")) {
+            window.event.returnValue = false;
+        }
+    }
+</script>
+</body>
+</html>

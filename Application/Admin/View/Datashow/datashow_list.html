@@ -1,0 +1,162 @@
+<extend name="Public:base" />
+<block name="main-header">
+	<div class="header">
+        <h1 class="page-title">数据统计</h1>
+        <ul class="breadcrumb">
+            <li>数据统计</li> 
+            <li class="active">数据统计</li>          
+        </ul>
+    </div>
+</block>
+
+<block name="main-content">
+	<div class="main-content"> 
+	<form enctype="multipart/form-data" action="" method="post"  name="form1" role="form" >
+      <div class="clearfix">
+	    <div class="btn-toolbar list-toolbar col-md-2" style="height:40px;line-height:40px;">
+			<label class="control-label" style="display:block; width：90%;text-align: right;">完成时间</label> </div>
+			<div class="col-md-4" >
+		    <div class="input-group date form_date" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" size="16" type="text" placeholder="选择开始时间"  value="" readonly name="txttimefrom" id="txttimefrom" />
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+            </div>
+            </div>
+            <div class="col-md-4" >
+            <div class="input-group date form_date" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" size="16" type="text" placeholder="选择结束时间" value="" readonly name="txttimeto" id="txttimeto" />
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+            </div>
+            </div>		   
+	   
+	  </div>
+
+
+
+    <script type="text/javascript">
+        function output() {
+            document.form1.action = "__URL__/weimei/index.php/Admin/Datashow/dingdan_output";
+            document.form1.submit();
+        }
+        function showlist() {
+            document.form1.action="__URL__/weimei/index.php/Admin/Datashow/datashow_list";
+            document.form1.submit();
+        }
+    </script>
+
+	  <div class="clearfix">		
+		     <div class='col-md-2' style="padding: 0px;">
+			     <button class="btn btn-primary" id="btn_search" type="submit" style="width:80%;float:left; " onclick="showlist()"><i class="glyphicon glyphicon-search"></i> 搜索</button></div>	
+			 <div class='col-md-2' style="padding: 0px;">   
+			  <button class="btn btn-danger" id="btn_search1" type="submit" style="width:80%;float:left; " onclick="output()"><i class="glyphicon icon-circle-arrow-down"></i> 导出</button></div>  
+	  </div>
+
+  </form>
+
+
+         
+		<form enctype="multipart/form-data" action="" method="post" >
+        <h3 class="page-tagline"></h3>
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table table-striped">
+						<thead>
+						  <tr style="background: #0099FF;color:#FFFFFF">
+								<th>总金额</th>
+								<th>{$msum}</th>					
+							</tr>
+							<tr style="background: #0099FF;color:#FFFFFF">
+								<th>总维美币</th>
+								<th>{$summ}</th>						
+							</tr>
+							<tr style="background: #0099FF;color:#FFFFFF">
+								<th>订单号</th>
+								<th>姓名</th>
+								<th>电话</th>
+								<th>美容项目</th>
+								<th>下单时间</th>
+								<th>支付金额</th>
+								<th>维美币</th>								
+							</tr>
+						</thead>
+						<tbody>
+							<volist name='orderlist' id='vo'>
+							<tr>								
+								<td>{$vo['order_id']}</td>
+								<td>{$vo['name']}</td>
+								<td>{$vo['mobile']}</td>
+								<td>{$vo['mei_id']}</td>
+								<td>{$vo['addtime']}</td>
+								<td>{$vo['totalmoney']}</td>								
+								<td>{$vo['coins']}</td>								
+							</tr>
+							</volist>
+						</tbody>
+					</table>
+					
+				</div>
+			</div>
+		</form>
+
+		<input type="text" value="all" id="page_condition" style="display:none;" />
+		<input type="text" value="" id="order_condition"  style="display:none;" />
+		<div class="result page" id='footer_div' style="text-align:center"><font id='wc'>共 {$order_count} 条记录  {$page_now}/{$server_pagenum} 页 </font>  <a class="pre_page" href="#">上一页</a>  <a class="next_page" href="#">下一页</a>  跳至<input style="width:25px;" class="jump_page" type="text"/> 页 &nbsp; <input type="button" class="btn btn-primary btn-sm jump_button" value="提交">  </div>
+	
+	</div>
+	<!-- 模板继承，js函数写到block里 -->
+	<script type="text/javascript">
+	    $('.form_date').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0,
+		language:'zh-CN',
+        });
+
+		$('.next_page').on('click', function() {
+			order_condition = $('#order_condition').val();
+			page_condition = $('#page_condition').val();
+			if ({$page_now} == {$server_pagenum}) {
+				alert('当前页为最后一页');
+			}else{
+				location.href = "{:U('datashow_list',array('page_now'=>$page_now+1,'txttimefrom'=>$stimef,'txttimeto'=>$stimet))}";
+			};
+		});
+
+		$('.pre_page').on('click', function() {
+			order_condition = $('#order_condition').val();
+			page_condition = $('#page_condition').val();
+			if ({$page_now} == 1) {
+				alert('当前页为第一页');
+			}else{
+				location.href = "{:U('datashow_list',array('page_now'=>$page_now-1,'txttimefrom'=>$stimef,'txttimeto'=>$stimet))}";
+			};
+		});
+
+		$('.jump_button').on('click', function() {
+			order_condition = $('#order_condition').val();
+			page_condition = $('#page_condition').val();
+			if ( parseInt($('.jump_page').val()) < 1 || parseInt($('.jump_page').val()) > {$server_pagenum} ) {
+				alert('超过页数范围');
+			}else{
+				//location.href = "{:U('datashow_list')}/page_now/"+$('.jump_page').val();
+				location.href = "{:U('datashow_list',array('page_now'=>$page_now-1,'txttimefrom'=>$stimef,'txttimeto'=>$stimet))}";
+			};
+		});
+
+		$(document).ready(function() {
+			if ('{$stimef}' != '') {
+				$('#txttimefrom').val('{$stimef}');
+			};
+			if ('{$stimet}' != '') {
+			$('#txttimeto').val('{$stimet}');
+			};
+		});
+	</script>
+	
+	</div>
+</block>
